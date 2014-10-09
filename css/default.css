@@ -1,0 +1,269 @@
+* 
+{
+    font-family:Arial;
+    font-size:12px;
+}
+body 
+{
+    background-color:#c6c6c6;
+    margin:0px;
+}
+
+input, select 
+{
+    margin:0px;
+    padding:2px;
+    
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    
+    border:solid 1px #f5821e;
+}
+
+h1
+{
+    font-size:30px;
+    font-weight:bold;
+    margin-left: 15px;
+    float:left;
+}
+h2
+{
+    font-size:20px;
+    font-weight:bold;
+}
+
+.pageWidth 
+{
+    width:955px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.container
+{
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    
+    -moz-border-radius:4px;
+    border-radius:4px;
+    
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+.orange
+{
+    background-color: #f5821e;
+    color: #fff;
+}
+.black
+{
+    background-color: #000;
+    color: #fff;
+}
+.white
+{
+    background-color: #fff;
+    color: #000;
+}
+.silver
+{
+    background-color: #c8c8c8;
+    color: #000;
+}
+
+
+.header
+{
+    background-image:url('../images/theme1/header/headerBackground.png');
+    background-repeat:repeat-x;
+    
+    min-height:96px;
+    max-height:96px;
+    height:96px;
+    color:#f5821e;
+}
+
+#headerLogo 
+{
+    background-image:url('../images/theme1/header/headerLogo.png');
+    background-repeat:no-repeat;
+    
+    min-height:87px;
+    max-height:87px;
+    height:87px;
+    
+    min-width:163px;
+    max-width:163px;
+    width:163px;
+    
+    padding:0px;
+    margin:0px;
+    
+    float:right;
+}
+
+#headerShadow 
+{ 
+    background-image: url('../images/theme1/header/headerShadow.png');
+    background-repeat:no-repeat;
+    background-position: center center;
+    min-height: 14px;
+    max-height: 14px;
+}
+
+
+.overviewLabel 
+{
+    width:80px;
+}
+.overviewData 
+{
+    width:150px;
+}
+.overviewInput 
+{
+    width:150px;
+}
+
+.overviewData, .overviewLabel, .overviewInput
+{
+    border:1px solid #f00;
+    float:left;
+    height:25px;
+    line-height:25px;
+}
+
+#userSelections input, #userSelections select 
+{
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+
+
+
+.sectionHeaderTitle
+{
+    padding-left: 30px;
+    float:left;
+    width:300px;
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.sectionMonthlyCosts
+{
+    float:left;
+    width:280px;
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+.sectionMonthlySavings
+{
+    float:left;
+    width:170px;
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+.sectionHeaderButton
+{   
+    width:87px;
+    height:24px;
+    background-image:url('../images/theme1/results/resultsButton.png');
+    background-repeat:no-repeat;
+    text-align: center;
+    line-height:24px;
+    color: #fff;
+    cursor: hand;
+}
+.sectionHeaderRow 
+{
+    height:25px;
+    min-height:25px;
+    max-height:25px;
+    
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+.sectionContentLeft 
+{
+    float:left;
+    padding: 10px;
+    
+    border: solid 1px #f5821e;
+    -moz-border-radius:4px;
+    border-radius:4px;
+}
+.sectionContentRight 
+{
+    float:right;
+    padding: 10px;
+    
+    border: solid 1px #f5821e;
+    -moz-border-radius:4px;
+    border-radius:4px;
+}
+
+
+#imgSelectedCar 
+{
+    margin-left:20px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    border: 1px solid #f5821e;
+    width: 192px;
+    height: 139px;
+}
+
+
+
+
+/* Three column layout results */
+.threeColumnResultsLeft
+{
+    float:left;
+    width:35%;
+    margin:0px;
+}
+.threeColumnResultsMiddle
+{
+    padding:0 35% 0 35%; 
+    margin:0px;
+}
+.threeColumnResultsRight
+{
+    float:right;
+    width:35%;
+    margin:0px;
+}
+
+
+
+/* Three column layout */
+.threeColumnLeft
+{
+    float:left;
+    width:33%;
+    margin:0px;
+}
+.threeColumnMiddle
+{
+    padding:0 33% 0 33%; 
+    margin:0px;
+}
+.threeColumnRight
+{
+    float:right;
+    width:33%;
+    margin:0px;
+}

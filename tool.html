@@ -1,0 +1,665 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Comparison Tool</title>
+        <!-- No follow para robots-->
+         <meta name="robots" content=" noindex, nofollow" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+		<script type="text/javascript" language="javascript">
+		    var labelPage = 1;
+		</script>
+		<script type="text/javascript" src="uploads/ComparisonUpload.js"></script>
+		<script type="text/javascript" src="js/effects.js"></script>
+		<script type="text/javascript" src="js/labels.js"></script>
+		<script type="text/javascript" src="js/general.js"></script>
+		<script type="text/javascript" src="js/json2.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="css/theme1.css" />
+
+<!-- GA -->
+
+
+
+<!-- GA-->
+
+ <!-- Google - UA-51481384-1 - Tracking Code-->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-51481384-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!-- Google Tracking Code-->
+	</head>
+
+	<body>
+    
+
+    
+        <div class="container-page">        
+        
+            <div class="white container-outer container-top">
+                <div class="black container-inner header">
+                    <div class="twothird left">
+                        <div class="big-header" id="HomePageTitle">HomePageTitle</div>
+                 
+                    
+                    </div>
+                    <div class="onethird right">
+                        <div class="logo right"></div>
+                    </div>
+                    
+                      <div onclick="
+                      location.href='index.html';
+					_gaq.push(['_trackEvent', 'BotaoBackP1', 'Click', 'VoltarP1']);
+
+"  style=" float:left; font-size:13px; cursor:pointer; width:80px; margin-top:37px; " class="onethird right">
+                  <img src="images/theme1/back2.jpg">     
+                    VOLTAR</div>
+                      
+                    <div style="clear: both;"></div>
+                </div>
+                <div class="white">
+                    <div class="section-header"
+                    style="width:45%; float:left;" id="ComparisonPageSelectVehicle">ComparisonPageSelectVehicle</div>
+<!-- para botão de back--> 
+                   <!-- <div class="section-header"
+                    style="width:45%; float:right; text-align:right; margin:0 10px 0 10px; font-size:12px; text-decoration:none;" id="ComparisonPageSelectVehicle"><a href="index.html" target="_self">voltar</a></div>-->
+<div style="clear:both;"> </div>
+<!-- para botão de back--> 
+<div style="clear:both;"> </div>
+
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                            <td width="25%" valign="top" >
+                                <table border="0" width="100%">
+                                    <tr>
+                                        <td colspan="2">
+                                         <select class="user-select four" style="border-color:#000; visibility: hidden;"></select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="middle" width="40%" id="ComparisonPageTypeofCar">ComparisonPageTypeofCar</td>
+                                        <td valign="top" width="60%">
+                                            <select onChange="_gaq.push(['_trackEvent', 'TipoDeCarro', 'SelectCarro', drpType.options[drpType.selectedIndex].getAttribute('value')]);" id="drpType" class="user-select four" style="border-color:#000;">
+                                                <option value="-1" id="Option1">...</option>
+                                           
+                                            </select></td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="middle" width="40%" id="ComparisonPageLeaseYears">ComparisonPageLeaseYears</td>
+                                        <td valign="top" width="60%">
+                                             <select onChange="_gaq.push(['_trackEvent', 'LeasingDuracao', 'SelectLeasingDuracao', drpYears.options[drpYears.selectedIndex].getAttribute('value')]);" id="drpYears" class="user-select four" style="border-color:#000;">
+                                                <option onchange="pageTracker._trackEvent('Forms', this.form.action, this.name);" value="-1" id="drpYearsDefault">...</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="middle" width="40%" id="ComparisonPageAnnualMileage">ComparisonPageAnnualMileage</td>
+                                        <td valign="top" width="60%">
+                                            <select onChange="_gaq.push(['_trackEvent', 'Kilometragem', 'SelectKilometragem', drpMileage.options[drpMileage.selectedIndex].getAttribute('value')]);" id="drpMileage" class="user-select four" style="border-color:#000;">
+                                                <option  onClick= value="-1"  id="drpMileageDefault">...</option> 
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="middle" width="40%" id="ComparisonPageFinanceMethod">ComparisonPageFinanceMethod</td>
+                                        <td valign="top" width="60%">
+                                            <select  onChange="_gaq.push(['_trackEvent', 'MtodFinanciamento', 'SelectFinciamento', drpFinancing.options[drpFinancing.selectedIndex].getAttribute('value')]);" id="drpFinancing" class="user-select four" style="border-color:#000;">
+                                                <option value="0" id="ComparisonPageBankLoan">ComparisonPageBankLoan</option>
+                                                <option value="1" id="ComparisonPageFinanceLease">ComparisonPageFinanceLease</option>
+                                                <option value="2" id="ComparisonPageOwnFunds">ComparisonPageOwnFunds</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td width="25%" valign="top" style="padding:3px;">
+                                <table border="0" width="100%">
+                                    <tr>
+                                        <td valign="middle" width="40%" id="ComparisonPageMake">ComparisonPageMake</td>
+                                        <td valign="top" width="60%">
+                                            <div class="user-select" style="border-color:#000; padding: 5px;" id="selectedBrand"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="middle" width="40%" id="ComparisonPageModel">ComparisonPageModel</td>
+                                        <td valign="top" width="60%">
+                                            <div class="user-select" style="border-color:#000; padding: 5px;" id="selectedModel"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="middle" width="40%" id="ComparisonPageType">ComparisonPageType</td>
+                                        <td valign="top" width="60%">
+                                           <div class="user-select" style="border-color:#000; padding: 5px;" id="selectedEngine"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="middle" width="40%" id="ComparisonPageFueltype">ComparisonPageFueltype</td>
+                                        <td valign="top" width="60%">
+                                            <div class="user-select" style="border-color:#000; padding: 5px;" id="selectedFuelType"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="middle" width="40%" id="ComparisonPageListPrice">ComparisonPageListPrice</td>
+                                        <td valign="top" width="60%">
+                                           <div class="user-select" style="border-color:#000; padding: 5px;"><span class="currency-symbol">&eur;</span> <span id="selectedListPrice"></span></div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td width="25%" valign="top" style="padding:3px;">
+                                <div id="imgSelectedCar" class="user-select four" style="border-color:#000;min-height:128px;background-position:center; background-repeat:no-repeat; ">
+                                   
+                                </div>
+                            </td>
+                            <td width="25%" valign="top" style="padding:3px;">
+                                <div class="orange container-inner">
+                                    <div id="ComparisonPageTailoredReport">ComparisonPageTailoredReport</div>
+                                    <div id="ComparisonPageCallUs">ComparisonPageCallUs</div>
+                                    <br />
+                                    <div class="button" id="btnContactUs">
+                                        <div class="button-dark-left"></div>
+                                        <div class="button-dark" onClick="_gaq.push(['_trackEvent', 'Botao_Contacto', 'Click', 'PedidoRelatorioPorMedida'])" id="ComparisonPageContactUs" >ComparisonPageContactUs</div>
+                                        <div class="button-dark-right"></div>
+                                    </div>
+                                </div>
+                                <div class="small-sub" id="ComparisonPageInfoPricesPictures">
+                                    ComparisonPageInfoPricesPictures
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="white container-outer">
+            
+                <div class="container-inner" style="margin:0px; padding:0px;" >
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                            <td width="25%" valign="top" style="padding:0px;" >
+                                <div class="silver container-inner-left" style="margin:0px; background-color:#FBCBA1;">
+                             <div class="small-header">
+                                    <span style=" text-transform:uppercase;" id="ComparisonPageFinanceMethodCaps">ComparisonPageFinanceMethodCaps</span>
+                                </div>
+                                <div class="amount">
+                                    <span id="lblFM_Selected">...</span>
+                                </div>
+                                <div class="small-sub">&nbsp;</div>
+                                </div>
+                            </td>
+                            <td width="25%" valign="top" style="padding:0px;">
+                                <div class="silver container-inner-noc" style="margin:0px;background-color:#FBCBA1;">
+                                    <div class="small-header">
+                                        <span id="ComparisonPageTotalMonthlyCosts">ComparisonPageTotalMonthlyCosts</span>
+                                    </div>
+                                    <div class="amount">
+                                        <span class="currency-symbol">€</span>
+                                        <span id="TotalMonthlyCosts"></span>
+                                    </div>
+                                    <div class="small-sub">
+                                        <span id="ComparisonPageAllpricesVATexcl">ComparisonPageAllpricesVATexcl</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td width="25%" valign="top" style="padding-right:5px">
+                                <div class="silver container-inner-right" style="margin:0px;background-color:#FBCBA1;">
+                                    <div class="small-header">
+                                        <span class="ComparisonPageOurLeaseprice">ComparisonPageOurLeaseprice</span>
+                                    </div>
+                                    <div class="amount">
+                                        <span class="currency-symbol">€</span>
+                                        <span id="TotalOurLeasePrice"></span>
+                                    </div>
+                                    <div class="small-sub">&nbsp;</div>
+                                </div>
+                            </td>
+                            <td width="25%" valign="top" style="padding-left:5px;">
+                                <div class="orange container-inner" style="margin:0px;">
+                                    <div class="small-header">
+                                        <span  id="ComparisonPageTotalSavings">ComparisonPageTotalSavings</span>
+                                    </div>
+                                    <div class="amount">
+                                        <span class="currency-symbol">€</span>
+                                        <span id="TotalSavings"></span>
+<!--Bot Tracked-->
+                                        <span style="text-transform:uppercase;"id="ComparisonPagePrintButton" onClick="_gaq.push(['_trackEvent', 'Botao_Print', 'Click_Print', 'ImprimirProposta'])" class="right clickable">ComparisonPagePrintButton</span>
+                                    </div>
+                                    <div class="small-sub">&nbsp;</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+            
+            <div class="white container-outer">
+                <div class="white container-inner section-header">
+                    <div id="ComparisonPageDetailsCostbreakdown" class="three left">ComparisonPageDetailsCostbreakdown</div>
+                </div>
+                <br />
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" class="detail-section white container-inner" id="sectionCarFinance">
+                    <tr>
+                        <td width="25%" valign="top" class="section-info">
+                            <div class="onethird i-carfinance icon left"></div>
+                            <div class="onethird section-title left" id="CarFinanceTitle">CarFinanceTitle</div>
+                        </td>
+                        <td width="25%" valign="top" class="amount">
+                            <div class="small-header">
+                                <span class="ComparisonPageYourMonthlyCost">ComparisonPageYourMonthlyCost</span>
+                            </div>
+                            <div class="amount">
+                                <span class="currency-symbol">€</span>
+                                <span id="YourMonthlyCostCF"></span>
+                            </div>
+                        </td>
+                        <td width="25%" valign="top" class="amount"> 
+                            <div class="small-header">
+                                <span class="ComparisonPageOurLeaseprice">ComparisonPageOurLeaseprice</span>
+                            </div>
+                            <div class="amount">
+                                <span class="currency-symbol">€</span>
+                                <span id="OurLeasePriceCF"></span>
+                            </div>
+                        </td>
+                        <td width="25%" valign="top">
+                            <div class="button" id="btn-details-carfinance"> 
+                                <div class="button-light-left"></div>
+                                <div onClick="_gaq.push(['_trackEvent', 'Botao_Drop', '+info', ' InfoFinanciamento'])" class="ComparisonPageOpen button-light">ComparisonPageOpen</div>
+                                <div class="button-light-right"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="details-carfinance" style="display:none;">
+                        <td width="25%" valign="top" style="min-height: 220px;">&nbsp;
+
+                        </td>
+                        <td width="25%" valign="top" class="arrow">
+                            <div>
+                                <div class="ComparisonPageHowCalculated small-header toggle" style="display:none;">ComparisonPageHowCalculated</div>
+                                <div id="CarFinanceMontlyCostInfo" class="toggle" style="display:none;">CarFinanceMontlyCostInfo</div>
+                            </div>
+                        </td>
+                        <td width="25%" valign="top" class="arrow">
+                            <div>
+                                <div class="ComparisonPageHowSavings small-header toggle" style="display:none;">ComparisonPageHowSavings</div>
+                                <div id="CarFinanceOurSavingsInfo" class="toggle" style="display:none;">CarFinanceOurSavingsInfo</div>
+                            </div>
+                        </td>
+                        <td width="25%" valign="top">&nbsp;
+
+                        </td>
+                    </tr>
+                </table>
+
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#ebebeb;" class="detail-section white container-inner" id="sectionUsedCarSaleIncome">
+                    <tr>
+                        <td width="25%" valign="top" class="section-info">
+                            <div class="onethird i-usedcarsale icon left"></div>
+                            <div class="onethird section-title left" id="UsedCarSaleIncomeTitle">UsedCarSaleIncomeTitle</div>
+                        </td>
+                        <td width="25%" valign="top" class="amount">
+                            <div class="small-header">
+                                <span class="ComparisonPageYourMonthlyCost" id="ComparisonPageHowCalculated">ComparisonPageYourMonthlyCost</span>
+                            </div>
+                            <div class="amount">
+                                <span class="currency-symbol">€</span>
+                                <span id="YourMonthlyCostUC"></span>
+                            </div>
+                        </td>
+                        <td width="25%" valign="top" class="amount">
+                            <div class="small-header">
+                                <span class="ComparisonPageOurLeaseprice" style="display:none;">ComparisonPageOurLeaseprice</span>
+                            </div>
+                            <div class="amount">
+                                <span class="currency-symbol" style="display:none;">€</span>
+                                <span id="OurLeasePriceUC" style="display:none;"></span>
+                            </div>
+                        </td>
+                        <td width="25%" valign="top">
+                            <div class="button" id="btn-details-carsale">
+                                <div class="button-light-left"></div>
+                                <div onClick="_gaq.push(['_trackEvent', 'Botao_Drop', '+info', ' InfoVendaUsado'])" class="ComparisonPageOpen button-light">ComparisonPageOpen</div>
+                                <div class="button-light-right"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="details-carsale" style="display:none;min-height: 220px;">
+                        <td width="25%" valign="top">
+                            <div>
+                                &nbsp;
+                            </div>
+                        </td>
+                        <td width="25%" valign="top" class="arrow">
+                            <div>
+                                <div class="ComparisonPageHowCalculated small-header toggle" style="display:none;">ComparisonPageHowCalculated</div>
+                                <div id="UsedCarSaleIncomeMontlyCostInfo" class="toggle" style="display:none;">UsedCarSaleIncomeMontlyCostInfo</div>
+                            </div>
+                        </td>
+                        <td width="25%" valign="top" class="arrow">
+                            <div>
+                                <div class="ComparisonPageHowSavings small-header toggle" style="display:none;">ComparisonPageHowSavings</div>
+                                <div id="UsedCarSaleIncomeOurSavingsInfo" class="toggle" style="display:none;">UsedCarSaleIncomeOurSavingsInfo</div>
+                            </div>
+                        </td>
+                        <td width="25%" valign="top">&nbsp;
+
+                        </td>
+                    </tr>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" class="detail-section white container-inner" id="sectionRunningCosts">
+                    <tr>
+                        <td width="25%" valign="top" class="section-info">
+                            <div class="onethird i-runningcosts icon left"></div>
+                            <div class="onethird section-title left" id="RunningCostsTitle">RunningCostsTitle</div>
+                        </td>
+                        <td width="25%" valign="top" class="amount">
+                            <div class="small-header">
+                                <span class="ComparisonPageYourMonthlyCost">ComparisonPageYourMonthlyCost</span>
+                            </div>
+                            <div class="amount">
+                                <span class="currency-symbol">€</span>
+                                <span id="YourMonthlyCostRC"></span>
+                            </div>
+                        </td>
+                        <td width="25%" valign="top" class="amount"> 
+                            <div class="small-header">
+                                <span class="ComparisonPageOurLeaseprice">ComparisonPageOurLeaseprice</span>
+                            </div>
+                            <div class="amount">
+                                <span class="currency-symbol">€</span>
+                                <span id="OurLeasePriceRC"></span>
+                            </div>
+                        </td>
+                        <td width="25%" valign="top">
+                            <div class="button" id="btn-details-carcosts">
+                                <div class="button-light-left"></div>
+<!--Bot Drop Down Tracked--> 
+                                <div class="ComparisonPageOpen button-light" onClick="_gaq.push(['_trackEvent', 'Botao_Drop', '+info', ' InfoCustosUtilizacao'])">ComparisonPageOpen</div>
+                                <div class="button-light-right"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="details-carcosts" style="display:none; min-height: 220px;">
+                        <td width="25%" valign="top">
+                            <div>
+                                &nbsp;
+                            </div>
+                        </td>
+                        <td width="25%" valign="top" class="arrow">
+                            <div>
+                                <div class="ComparisonPageHowCalculated small-header toggle" style="display:none;">ComparisonPageHowCalculated</div>
+                                <div id="RunningCostsMontlyCostInfo" class="toggle" style="display:none;">CarFinanceMontlyCostInfo</div>
+                            </div>
+                        </td>
+                        <td width="25%" valign="top" class="arrow">
+                            <div>
+                                <div class="ComparisonPageHowSavings small-header toggle" style="display:none;">ComparisonPageHowSavings</div>
+                                <div id="RunningCostsOurSavingsInfo" class="toggle" style="display:none;">CarFinanceOurSavingsInfo</div>
+                            </div>
+                        </td>   
+                        <td width="25%" valign="top">&nbsp;
+                            
+                        </td>
+                    </tr>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" class="detail-section white container-inner" id="sectionDowntimeCosts">
+                    <tr>
+                        <td width="25%" valign="top" class="section-info">
+                            <div class="onethird i-vehicledowntime icon left"></div>
+                            <div class="onethird section-title left" id="DowntimeCostsTitle">DowntimeCostsTitle</div>
+                        </td>
+                        <td width="25%" valign="top" class="amount">
+                            <div class="small-header">
+                                <span class="ComparisonPageYourMonthlyCost">ComparisonPageYourMonthlyCost</span>
+                            </div>
+                            <div class="amount">
+                                <span class="currency-symbol">€</span>
+                                <span id="YourMonthlyCostVD"></span>
+                            </div>
+                        </td>
+                        <td width="25%" valign="top" class="amount"> 
+                            <div class="small-header">
+                                <span class="ComparisonPageOurLeaseprice">ComparisonPageOurLeaseprice</span>
+                            </div>
+                            <div class="amount">
+                                <span class="currency-symbol">€</span>
+                                <span id="OurLeasePriceVD"></span>
+                            </div>
+                        </td>
+                        <td width="25%" valign="top">
+                            <div class="button" id="btn-details-downtime">
+                                <div class="button-light-left"></div>
+<!---->
+                                <div onClick="_gaq.push(['_trackEvent', 'Botao_Drop', '+info', ' InfoCustosImobilizacao'])" class="ComparisonPageOpen button-light">ComparisonPageOpen</div>
+                                <div class="button-light-right"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="details-downtime" style="display:none; min-height: 220px;">
+                        <td width="25%" valign="top">
+                            <div >
+                                &nbsp;
+                            </div>
+                        </td>
+                        <td width="25%" valign="top" class="arrow">
+                            <div>
+                                <div class="ComparisonPageHowCalculated small-header toggle" style="display:none;">ComparisonPageHowCalculated</div>
+                                <div id="DowntimeCostsMontlyCostInfo" class="toggle" style="display:none;">DowntimeCostsMontlyCostInfo</div>
+                                <br />
+                                <div id="DowntimeCostsMontlyCostInfoDays" class="toggle section-title" style="display:none; color: #f5821e; ">DowntimeCostsMontlyCostInfoDays</div>
+                            </div>
+                        </td>
+                        <td width="25%" valign="top" class="arrow">
+                            <div>
+                                <div class="ComparisonPageHowSavings small-header toggle" style="display:none;">ComparisonPageHowSavings</div>
+                                <div id="DowntimeCostsOurSavingsInfo" class="toggle" style="display:none;">DowntimeCostsOurSavingsInfo</div>
+                            </div>
+                        </td>   
+                        <td width="25%" valign="top">&nbsp;
+                            
+                        </td>
+                    </tr>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" class="detail-section white container-inner" id="sectionManagementCosts">
+                    <tr>
+                        <td width="25%" valign="top" class="section-info">
+                            <div class="onethird i-managementcosts icon left"></div>
+                            <div class="onethird section-title left" id="ManagementCostsTitle">ManagementCostsTitle</div>
+                        </td>
+                        <td width="25%" valign="top" class="amount">
+                            <div class="small-header">
+                                <span class="ComparisonPageYourMonthlyCost">ComparisonPageYourMonthlyCost</span>
+                            </div>
+                            <div class="amount">
+                                <span class="currency-symbol">€</span>
+                                <span id="YourMonthlyCostMC"></span>
+                            </div>
+                        </td>
+                        <td width="25%" valign="top" class="amount"> 
+                            <div class="small-header">
+                                <span class="ComparisonPageOurLeaseprice">ComparisonPageOurLeaseprice</span>
+                            </div>
+                            <div class="amount">
+                                <span class="currency-symbol">€</span>
+                                <span id="OurLeasePriceMC"></span>
+                            </div>
+                        </td>
+                        <td width="25%" valign="top">
+                            <div class="button" id="btn-details-management">
+                                <div class="button-light-left"></div>
+<!---->
+                                <div onClick="_gaq.push(['_trackEvent', 'Botao_Drop', '+info', ' InfoCustosGestao'])" class="ComparisonPageOpen button-light">ComparisonPageOpen</div>
+                                <div class="button-light-right"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="details-management" style="display:none; min-height:220px;">
+                        <td width="25%" valign="top">
+                            <div>
+                                &nbsp;
+                            </div>
+                        </td>
+                        <td width="25%" valign="top" class="arrow">
+                            <div>
+                                <div class="ComparisonPageHowCalculated small-header toggle" style="display:none;">ComparisonPageHowCalculated</div>
+                                <div id="ManagementCostsMontlyCostInfo" class="toggle" style="display:none;">CarFinanceMontlyCostInfo</div>
+                                <br />
+                                <div id="ManagementCostsMontlyCostInfoHours" class="toggle section-title" style="display:none; color: #f5821e;">ManagementCostsMontlyCostInfoHours</div>
+                            </div>
+                        </td>
+                        <td width="25%" valign="top" class="arrow">
+                            <div>
+                                <div class="ComparisonPageHowSavings small-header toggle" style="display:none;">ComparisonPageHowSavings</div>
+                                <div id="ManagementCostsOurSavingsInfo" class="toggle" style="display:none;">CarFinanceOurSavingsInfo</div>
+                            </div>
+                        </td>   
+                        <td width="25%" valign="top">&nbsp;
+                            
+                        </td>
+                    </tr>
+                </table>
+            </div>
+		</div>
+		
+		<div id="contactUs" class="contact" style="display:none;">
+		    <div id="contactUsPopup" class="contact-popup container-outer">
+		        <form action="#" method="post">
+		            <table width="100%">
+		                <tr>
+		                    <td colspan="2" id="ContactPageTitle" class="section-title">ContactPageTitle</td>
+		                </tr>
+		                <tr><td colspan="2">&nbsp;</td></tr>
+		                <tr>
+		                    <td colspan="2" id="ContactPageName">ContactPageName</td>
+		                </tr>
+		                <tr>
+		                    <td width="300">
+		                        <input type="text" class="user-select contact-full" name="contactName" />
+		                    </td>
+		                    <td>
+		                        <span id="ContactPageMr">ContactPageMr</span><span><input type="radio" value="Mr." name="ContactPageSuffix" /></span>
+		                        <span id="ContactPageMrs">ContactPageMrs</span><span><input type="radio" value="Mrs." name="ContactPageSuffix" /></span>
+		                    </td>
+		                </tr>
+		                <tr><td colspan="2">&nbsp;</td></tr>
+		                <tr>
+		                    <td colspan="2" id="ContactPageEmail">ContactPageEmail</td>
+		                </tr>
+		                <tr>
+		                    <td colspan="2">
+		                        <input type="text" class="user-select contact-full" name="contactEmail" />
+		                    </td>
+		                </tr>
+		                <tr><td colspan="2">&nbsp;</td></tr>
+		                <tr>
+		                    <td colspan="2" id="ContactPagePhonenumber">ContactPagePhonenumber</td>
+		                </tr>
+		                <tr>
+		                    <td colspan="2">
+		                        <input type="text" class="user-select contact-full" name="contactPhone" />
+		                    </td>
+		                </tr>
+		                <tr><td colspan="2">&nbsp;</td></tr>
+		                <tr>
+		                    <td colspan="2" id="ContactPageNumberVehicles">ContactPageNumberVehicles</td>
+		                </tr>
+		                <tr>
+		                    <td colspan="2">
+		                        <input type="text" class="user-select contact-full" name="contactVehicles" />
+		                    </td>
+		                </tr>
+		                <tr><td colspan="2">&nbsp;</td></tr>
+		                <tr>
+		                    <td id="ContactPageTailoredReport">
+		                        ContactPageTailoredReport
+		                    </td>
+		                    <td>
+		                        <span id="ContactPageYesOption">ContactPageYesOption</span> <span><input type="radio" value="Yes" name="ContactPageTailoredReportOption" /></span>
+		                        <span id="ContactPageNoOption">ContactPageNoOption</span> <span><input type="radio" value="No" name="ContactPageTailoredReportOption" /></span>
+		                    </td>
+		                </tr>
+		                <tr class="optional1"><td colspan="2">&nbsp;</td></tr>
+		                <tr class="optional1"><td colspan="2" id="ContactPageExtraField1">ContactPageExtraField1</td></tr>
+		                <tr class="optional1">
+		                    <td colspan="2">
+		                        <input type="text" class="user-select contact-full" name="optional1" />
+		                    </td>
+		                </tr>
+		                <tr class="optional2"><td colspan="2">&nbsp;</td></tr>
+		                <tr class="optional2"><td colspan="2" id="ContactPageExtraField2">ContactPageExtraField2</td></tr>
+		                <tr class="optional2">
+		                    <td colspan="2">
+		                        <input type="text" class="user-select contact-full" name="optional2" />
+		                    </td>
+		                </tr>
+		                <tr class="optional3"><td colspan="2">&nbsp;</td></tr>
+		                <tr class="optional3"><td colspan="2" id="ContactPageExtraField3">ContactPageExtraField3</td></tr>
+		                <tr class="optional3">
+		                    <td colspan="2">
+		                        <input type="text" class="user-select contact-full" name="optional3" />
+		                    </td>
+		                </tr>
+		                <tr class="optional4"><td colspan="2">&nbsp;</td></tr>
+		                <tr class="optional4"><td colspan="2" id="ContactPageExtraField4">ContactPageExtraField4</td></tr>
+		                <tr class="optional4">
+		                    <td colspan="2">
+		                        <input type="text" class="user-select contact-full" name="optional4" />
+		                    </td>
+		                </tr>
+		                <tr class="optional5"><td colspan="2">&nbsp;</td></tr>
+		                <tr class="optional5"><td colspan="2" id="ContactPageExtraField5">ContactPageExtraField5</td></tr>
+		                <tr class="optional5">
+		                    <td colspan="2">
+		                        <input type="text" class="user-select contact-full" name="optional5" />
+		                    </td>
+		                </tr>
+		                <tr class="optional6"><td colspan="2">&nbsp;</td></tr>
+		                <tr class="optional6"><td colspan="2" id="ContactPageExtraField6">ContactPageExtraField6</td></tr>
+		                <tr class="optional6">
+		                    <td colspan="2">
+		                        <input type="text" class="user-select contact-full" name="optional6" />
+		                    </td>
+		                </tr>
+		                <tr class="optional7"><td colspan="2">&nbsp;</td></tr>
+		                <tr class="optional7"><td colspan="2" id="ContactPageExtraField7">ContactPageExtraField7</td></tr>
+		                <tr class="optional7">
+		                    <td colspan="2">
+		                        <input type="text" class="user-select contact-full" name="optional7" />
+		                    </td>
+		                </tr>
+		                <tr><td colspan="2">&nbsp;</td></tr>
+		                <tr><td colspan="2">&nbsp;</td></tr>
+		                <tr>
+		                    <td>
+		                        <div class="button left" id="btnContactUsClose" style="display:inline-block;">
+                                    <div class="button-orange-left"></div>
+                                    <div class="button-orange" id="ContactPageCloseButton">ContactPageCloseButton</div>
+                                    <div class="button-orange-right"></div>
+                                </div>
+		                    </td>
+		                    <td>
+		                        <div class="button right" id="btnContactUsSend" style="display:inline-block;">
+                                    <div class="button-orange-right right"></div>
+                                    <div class="button-orange right" id="ContactPageSend">ContactPageSend</div>
+                                    <div class="button-orange-left right"></div>
+                                </div>
+		                    </td>
+		                </tr>
+		            </table>
+		        </form>
+		    </div>
+		</div>
+	</body>
+</html>

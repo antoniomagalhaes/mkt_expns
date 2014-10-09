@@ -1,0 +1,261 @@
+body 
+{
+    font-family:Arial;
+    font-size:12px;
+    background-color:#ccc;
+    margin:0px;
+}
+table, tr, td 
+{
+    
+    font-family:Arial;
+    font-size:12px;
+}
+input, select 
+{
+    margin: 0px;
+    padding: 2px;
+    
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+   
+    border: solid 1px #f5821e;
+}
+
+.inputFill 
+{
+    width:100%;
+}
+
+.outerContainer 
+{
+    margin-top:0px;
+    margin-bottom:20px;
+    
+    max-width:925px;
+    min-width:925px;
+    width:925px;
+    
+    background-color:#fff;
+    padding:12px;
+}
+
+.container 
+{
+    -moz-border-radius:4px;
+    border-radius:4px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+.coloredConainter
+{
+    background-color: #f5821e;
+    color: #fff;
+}
+.blackConainter 
+{
+    background-color: #000;
+    color: #fff;
+}
+.resultConainer
+{
+    min-height: 95px;
+    max-height: 95px;
+    height: 95px;
+}
+
+.headCorners 
+{
+    -moz-border-radius-topright: 0px;
+    border-top-right-radius:0px;
+    
+    -moz-border-radius-topleft: 0px;
+    border-top-left-radius: 0px;
+
+    -moz-border-radius-bottomleft: 4px;
+    border-bottom-left-radius: 4px;
+
+    -moz-border-radius-bottomright: 4px;
+    border-bottom-right-radius: 4px;
+
+}
+
+/* Header*/
+#headerContainer 
+{
+    background-image:url('../images/theme1/header/headerBackground.png');
+    background-repeat:repeat-x;
+    
+    -moz-border-radius:5px;
+    border-radius:5px;
+    
+    min-height:96px;
+    max-height:96px;
+    height:96px;
+    
+    min-width:100%;
+    max-width:100%;
+    width:100%;
+    
+    padding:0px;
+    margin:0px;
+}
+#headerTitle 
+{
+    float:left;
+    font-family:Arial;
+    font-size:30px;
+    color:#f5821e;
+    font-weight:bold;
+    margin:15px;
+}
+
+.resultDetails 
+{
+    height:100px;
+}
+.sectionHeaderTitle
+{
+    padding-left: 30px;
+    float:left;
+    width:300px;
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.sectionMonthlyCosts
+{
+    float:left;
+    width:280px;
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+.sectionMonthlySavings
+{
+    float:left;
+    width:170px;
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+.sectionHeaderButton
+{   
+    width:87px;
+    height:24px;
+    background-image:url('../images/theme1/results/resultsButton.png');
+    background-repeat:no-repeat;
+    text-align: center;
+    line-height:24px;
+    color: #fff;
+    cursor: hand;
+}
+.sectionHeaderRow 
+{
+    height:25px;
+    min-height:25px;
+    max-height:25px;
+    
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+.sectionContentLeft 
+{
+    float:left;
+    width:400px;
+    padding: 10px;
+    
+    border: solid 1px #f5821e;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    margin-bottom:50px;
+}
+.sectionContentRight 
+{
+    float:right;
+    width:400px;
+    padding: 10px;
+    
+    border: solid 1px #f5821e;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    margin-bottom:50px;
+}
+#headerLogo 
+{
+    background-image:url('../images/theme1/header/headerLogo.png');
+    background-repeat:no-repeat;
+    
+    min-height:87px;
+    max-height:87px;
+    height:87px;
+    
+    min-width:163px;
+    max-width:163px;
+    width:163px;
+    
+    padding:0px;
+    margin:0px;
+    
+    float:right;
+}
+#headerShadow 
+{ 
+    background-image: url('../images/theme1/header/headerShadow.png');
+    background-repeat:no-repeat;
+    background-position: center center;
+    min-height: 14px;
+    max-height: 14px;
+}
+
+
+#imgSelectedCar 
+{
+    margin-left:20px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    border: 1px solid #f5821e;
+    width: 192px;
+    height: 139px;
+}
+
+
+/* Results */
+
+
+/* Three column layout */
+.threeColumnLeft
+{
+    float:left;
+    width:33%;
+    margin:0px;
+}
+.threeColumnMiddle
+{
+    padding:0 33% 0 33%; 
+    margin:0px;
+}
+.threeColumnRight
+{
+    float:right;
+    width:33%;
+    margin:0px;
+}
+
+.dot 
+{
+    background-image: url('../images/theme1/dot.png');
+    background-repeat: no-repeat;
+    width: 101px;
+    height: 101px;
+    z-index: 99;
+    position: relative;
+    margin-left: 300px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+}

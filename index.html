@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<head>
+	<title>Comparison Tool</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">        
+<!-- No follow para robots-->
+         <meta name="robots" content=" noindex, nofollow" />
+<!-- No follow para robots-->
+  
+        
+		<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+		
+		<script type="text/javascript" language="javascript">var labelPage = 0;</script>
+		<script type="text/javascript" src="uploads/ComparisonUpload.js"></script>
+		<script type="text/javascript" src="js/labels.js"></script>
+		<script type="text/javascript" src="js/general.js"></script>
+        <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="js/additional-methods.min.js"></script>
+        
+        
+<!-- FANCY BOX -->
+      <!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="../lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="source/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+	<!-- Add Button helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="../source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+	<script type="text/javascript" src="source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+
+	<!-- Add Thumbnail helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="../source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+	<script type="text/javascript" src="source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+	<!-- Add Media helper (this is optional) -->
+	<script type="text/javascript" src="source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+
+	<script type="text/javascript">
+        $(document).ready(function() {
+            $(".fancybox").fancybox();
+        });
+    </script>
+<!-- FANCY BOX -->
+
+	<link rel="stylesheet" type="text/css" href="css/theme1.css" />
+
+<!-- Abre uma janela com iframe onLoad-->   
+	<script type="text/javascript">
+    //$//(document).ready(function() {
+       // $.fancybox({'href' : 'http://www.cnn.com','frameWidth':500,'frameHeight':500,'hideOnContentClick': false,'type':'iframe'});
+    //});
+    </script>
+<!-- Abre uma janela com iframe onLoad-->   
+
+<!-- Google - UA-51481384-1 - Tracking Code-->
+	<script type="text/javascript">
+    
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-51481384-1']);
+      _gaq.push(['_trackPageview']);
+    
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    
+    </script>
+
+<!-- Google Tracking Code-->
+<style>
+/*Botão rolover submit*/
+#signupForm{margin:30px auto 5px 23px;
+	float:left;
+}
+#contactform{
+	
+	}
+
+ul.forms {
+	text-align:left;
+		list-style-type:none;
+	padding:0;
+	float: left;
+	list-style: none;
+	/*position:relative;*/
+	font-family:Arial, Helvetica, sans-serif; color:#FFF; font-size:14px;
+}
+
+.field {
+	font-family:Arial, Helvetica, sans-serif; color:#000; font-size:14px; background:#fff; border:#161616; padding:2px; 
+	 width:200px; 
+/*	 float:right;
+*/	
+}
+
+
+UL.forms li {
+	float: left;
+	margin-bottom: 3px;
+	width: 280px;
+	position:relative;
+	list-style-type:  none;
+}
+
+UL.forms label {
+	color: #006; font-size:14px; float:left; padding-top:6px; font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif; color:#FFF;;
+}
+
+UL.forms .error { 
+	display: block;
+}
+
+UL.forms li.buttons {
+	text-align:right;
+}
+
+
+
+#submitted{ background-color:#F90;
+font-weight:bold;
+/*background: url(images/bot_submit.png) 0px 0px no-repeat;
+*/
+/*width:128px;
+height:47px;*/
+height: 26px;
+border:none;
+cursor:pointer;
+display:block;
+/*float:right;
+margin-right:-70px;
+margin-top:10px;
+margin-bottom:5px;*/
+font-size:14px;
+color:#000;
+
+
+/*text-indent:-9999px;
+*/
+
+}
+
+#submitted:hover{ background-color: #FC0;
+font-weight:bold;
+/*background: url(images/bot_submit.png) 0px -47px no-repeat;*/
+/*width:128px;
+height:47px;*/
+height: 26px;
+border:none;
+cursor:pointer;
+display:block;
+/*text-indent:-9999px;
+*/
+/*margin-right:-70px;
+margin-bottom:5px;*/
+color:#FFF;
+font-size:14px;
+
+
+}
+
+#nome_label, #telefone_label, #empresa_label, #email_label{ display:block; width:84px; height:17px; padding-top:3px; color:#000; }
+/*#nome_label{ background:url(images/nome-label.png) bottom left no-repeat;}*/
+/*#localidade_label{ background:url(images/localidade-label.png) bottom left no-repeat;}
+*/
+/*#telefone_label{  background:url(images/telefone-label.png) bottom left no-repeat;}
+*/
+/*#email_label{ background:url(images/email-label.png) bottom left no-repeat;}
+*/#button{ float:right;
+margin-right:-70px;
+margin-top:10px;
+margin-bottom:5px;}
+
+.error{font-family:Arial, Helvetica, sans-serif; color: #999; font-size:12px; padding:0px 0px 5px 0px; text-align:left;}
+
+/*.obrigatorio{ width:250px; height:15px; margin:0; padding:0; background:url(images/preenchimento.png) bottom right no-repeat;}
+*/
+#cleardiv{ clear:both;}
+
+/* herdado das validações*/
+label { 
+	float: left; 
+	padding-right:0px;
+}
+label.error { display: block; margin-left:220px; margin-top:15px; width:138px; position:absolute; font:Arial, Helvetica, sans-serif; font-size:10px;
+
+	float: none; 
+	color: #999!important; 
+	padding-right:3px; 
+	vertical-align: top;
+	cursor:text;
+	background:url(images/nono.png) bottom left no-repeat #FFF;
+}
+p { 
+	clear: both; 
+}
+.gray { 
+	/*color: gray;*/
+	display: none;
+}
+
+</style>
+
+	<script type="text/javascript">
+    $(document).ready(function(){
+<!-- Contact Form  -->
+			$("#contact_us").fancybox({
+				type     :"inline",
+				closeBtn :true
+			});
+			
+		});
+	</script>
+	<script type="text/javascript">
+	
+	$("#signupForm").click(function(){	
+			
+			var nome 	= $("#nome").val();
+			var empresa = $("#empresa").val();
+			var telefone = $("#telefone").val()
+			var email 	= $("#email").val();
+			
+			
+				if( (nome == "") || (empresa == "") || (telefone == "")|| (email == "")){
+					$(".errormsg").html(" * Todos os campos são obrigatórios").fadeIn("Slow").fadeOut(3000);
+				}else if(!isValidEmailAddress(email)){
+					$(".errormsg").html(" * Insira um e-mail válido").fadeIn("Slow").fadeOut(3000);
+					}else if(!isValidEmailAddress(telefone)){
+					$(".errormsg").html(" * Insira um telefone válido").fadeIn("Slow").fadeOut(3000);
+					
+				} else{
+					$(".errormsg").fadeOut();
+					$.ajax({
+						type	:'POST',
+						url		:'processform.php',
+						data	:{	'nome' 	 : name,
+									'empresa' 	 : empresa,
+									'telefone'	 : telefone,
+									'email'	 : email
+								 },
+						beforeSend: function(){
+							$("#signupForm").empty().html("<h3>Estamos a enviar os seus dados. Aguarde por favor . . . </h3>");
+						},
+						error:function(){
+							alert("Dados não submetidos!");
+						},
+						success:function(returnData){
+							$("#signupForm").empty().html("<h3>Os seus dados foram enviados <br/> Muito Obrigado</h3>");
+							window.location.reload();
+							
+						}
+					});
+				}
+				
+		});
+		
+	</script>
+
+<!--Javascript para validação-->
+	<script type="text/javascript">
+    $(document).ready(function(){
+        // validate signup form on keyup and submit
+        $("#signupForm").validate({
+            rules: {
+                nome: "required",
+                empresa: "required",
+                email: {
+                    required: true,
+                    email: true
+                },
+                telefone: {
+                    required: true,
+                    telefonePT: true
+                }
+                
+            },
+            messages: {
+                nome: "Insira o seu nome",
+				telefone: "Insira telefone",
+                empresa: "Insira a localidade",
+                email: "Insira o seu email"
+                //telefone: "Please specify a valid Telefone.",
+            }
+        });
+        
+        
+    });
+    </script> 
+<!--Javascript para validação-->
+
+	</head>
+
+	<body>
+        <div class="container-page">
+            <div class="white container-outer container-top">
+                <div class="black container-inner header">
+                    <div class="twothird left">
+                        <div class="big-header" id="HomePageTitle">HomePageTitle</div>
+                        <div class="big-header1" id="HomePageTitle1">HomePageTitle1</div>
+                    </div>
+                    <div class="onethird right">
+                        <div class="logo right"></div>
+                    </div>
+                    <div style="clear: both;"></div>
+                </div>
+     
+<!--  Início   -->     
+                <div class="white">
+                    <div class="black container-inner-left left" style="min-height:300px; width:50%; margin-bottom:0px;margin-right:0px;">
+                        <div class="section-info section-title" style="margin-left:0px; font-size:22px; margin-bottom: 20px;" id="HomePageSubtitle">HomePageSubtitle</div>
+                        <div id="HomePageContent" style="font-size:14px;">HomePageContent</div>
+                        <div>
+                            <div class="button" style="margin-top:30px;" id="btnStartComparison">
+                                <div class="button-orange-left"></div>
+                                <div class="button-orange" id="HomePageStartButton" onClick="_gaq.push(['_trackEvent', 'BotaoToP2', 'Click', 'EntradaNoSimulador'])" >HomePageStartButton</div>
+                                <div class="button-orange-right"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="black container-inner-right right landingsPageBackground" style="min-height:300px; width:50%; margin-bottom:0px;margin-right:0px;" id="LandingBackground">
+                        
+                    </div>
+                    <div style="clear: both;"></div>
+                </div>
+<!-- fim-->
+
+     
+            
+            <div class="white container-outer">
+                 <div class="silver container-inner">
+                    <div class="two left">
+                        <div class="section-info section-title" style="margin-left:0px;" id="HomePageHeader1">HomePageHeader1</div>
+                        <div id="HomePageContent1">HomePageContent1</div>
+                    </div>
+                    <div class="one left">
+                        <div class="section-info section-title" style="margin-left:0px;" id="HomePageHeader2">HomePageHeader2</div>
+                        <div id="HomePageContent2">HomePageContent2</div>
+                    </div>
+                    <div class="one left">
+                        <div class="section-info section-title" style="margin-left:0px;" id="HomePageHeader3">HomePageHeader3</div>
+                        <div id="HomePageContent3">HomePageContent3</div>
+                    </div>
+                    <div style="clear: both;"></div>
+                 </div>
+                 
+                 <div class="black container-inner header footer" style="margin-bottom:0px;">
+                     <div class="three left">
+                        <div  style="height: 40px;">
+                            <span id="HomePageCompanyName">HomePageCompanyName</span>
+                            <span class="sep-bullet">&bull;</span>
+                            <span id="HomePageAddress1">HomePageAddress1</span>
+                            <span class="sep-bullet">&bull;</span>
+                            <span id="HomePageAddress2">HomePageAddress2</span>
+                            <span class="sep-bullet">&bull;</span>
+                            <span id="HomePageAddress3">HomePageAddress3</span>
+                        </div>
+                        <div>
+                            <span style="font-size:20px; margin-right:5px;">&rsaquo;</span> 
+ <!--Bot tracked-->
+                          <span id="" href="#inline1" onClick="_gaq.push(['_trackEvent', 'Botao_P1', 'Click', 'Responsabilidade'])" class="clickable fancybox" title="Responsabilidade" >Responsabilidade</span>
+                           <!-- <span id="HomePageDisclaimer" onClick="_gaq.push(['_trackEvent', 'Botao_P1', 'Click', 'Responsabilidade'])" class="clickable fancybox fancybox.iframe" title="Responsabilidade" >HomePageDisclaimer</span>-->
+                       
+                            <span style="font-size:20px; margin-right:5px;margin-left:10px;">&rsaquo;</span>
+<!--Bot tracked-->
+ <span id="" href="#inline2" onClick="_gaq.push(['_trackEvent', 'Botao_P1', 'Click', 'Responsabilidade'])" class="clickable fancybox" title="Privacidade" >Privacidade</span>
+                         <!--   <span id="HomePagePrivacyStatement" onClick="_gaq.push(['_trackEvent', 'Botao_P1', 'Click', 'Privacidade'])" class="clickable">HomePagePrivacyStatement</span>-->
+                        </div>
+                    </div>
+                    <div class="one left">
+                    
+                    <span id="" href="#inline3" onClick="_gaq.push(['_trackEvent', 'Botao_P1', 'Click', 'Contacto'])" class="clickable fancybox" title="Contacte-nos" >CONTACTE-NOS</span>
+                        <!--<div style="height: 20px;"><span style="font-size:20px; margin-right:5px;">&rsaquo;</span>
+                        <span id="HomePageContactUs" onClick="_gaq.push(['_trackEvent', 'Botao_P1', 'Click', 'Contacto'])" class="clickable">HomePageContactUs</span></div>-->
+                        <div style="height: 20px;"><span style="font-size:20px; margin-right:5px;">&rsaquo;</span>
+<!--Bot tracked-->
+                              <span id="HomePageAbout" onClick="_gaq.push(['_trackEvent', 'Botao_P1', 'Click', 'Sobre'])" class="clickable">HomePageAbout</span></div>
+                    </div>
+                    <div style="clear: both;"></div>
+
+<!--Conteúdo da responsabilidade -->
+
+                    <div id="inline1" style="width:600px;display: none;">
+		<h3>Exonera&ccedil;&atilde;o de Responsabilidade</h3>
+		<p>
+<strong>Geral</strong><br>
+Os termos e disposi&ccedil;&otilde;es da presente exonera&ccedil;&atilde;o de responsabilidade (adiante designada por &ldquo;Exonera&ccedil;&atilde;o de Responsabilidade&rdquo;) aplicam-se a este web site www.leaseplan.pt propriedade da LeasePlan Portugal-Com&eacute;rcio e Aluguer de Autom&oacute;veis e
+Equipamentos,Lda (&ldquo;LeasePlan&rdquo;). A presente Exonera&ccedil;&atilde;o de Responsabilidade deve ser lida atentamente.
+Ao aceder a este web site e/ou ao fazer uso da informa&ccedil;&atilde;o nele contida ou que atrav&eacute;s dele possa ser obtida, acorda em ficar vinculado pela presente Exonera&ccedil;&atilde;o de Responsabilidade.
+Em caso de conflito entre os termos e condi&ccedil;&otilde;es de produtos e servi&ccedil;os espec&iacute;ficos e os termos e condi&ccedil;&otilde;es da presente Exonera&ccedil;&atilde;o de
+Responsabilidade, as condi&ccedil;&otilde;es espec&iacute;ficas dos produtos em causa prevalecer&atilde;o.<br><br>
+<strong>Uso deste Web Site</strong><br>
+A informa&ccedil;&atilde;o contida neste web site ou que atrav&eacute;s dele pode ser obtida n&atilde;o poder&aacute; ser usada em substitui&ccedil;&atilde;o de qualquer forma de aconselhamento. As decis&otilde;es tomadas com base nesta informa&ccedil;&atilde;o ser&atilde;o por sua conta e risco. Muito embora a LeasePlan se esforce por facultar uma informa&ccedil;&atilde;o exacta, completa e actualizada, que ter&aacute; obtido de fontes consideradas fidedignas, a LeasePlan n&atilde;o declara nem garante, quer expressa quer implicitamente, que a informa&ccedil;&atilde;o por ela veiculada neste website ou que atrav&eacute;s dele possa ser obtida &eacute; exacta e completa ou est&aacute; actualizada.
+A LeasePlan controla e mant&eacute;m este web site a partir de Portugal e n&atilde;o declara nem garante que a informa&ccedil;&atilde;o contida neste web si te ou que atrav&eacute;s dele possa ser obtida se adequa ao uso noutros locais ou se encontra dispon&iacute;vel nos mesmos. Caso aceda a este web site a partir de outro local, fica respons&aacute;vel pelo cumprimento com a legisla&ccedil;&atilde;o aplic&aacute;vel do local em causa.
+A LeasePlan n&atilde;o declara nem garante que este web site funcionar&aacute; sem erro e sem interrup&ccedil;&otilde;es.
+N&atilde;o &eacute; permitido o uso deste web site que o impe&ccedil;a de ser usado por outros utilizadores da Internet, que possa colocar em risco/perigo o seu funcionamento e/ou que possa afectar a informa&ccedil;&atilde;o nele contida ou que atrav&eacute;s dele possa ser obtida ou o software subjacente.<br><br>
+<strong>Informa&ccedil;&atilde;o a Terceiros, Produtos e Servi&ccedil;os</strong><br>
+O facultamento, pela LeasePlan de liga&ccedil;&otilde;es de hipertexto a web sites de terceiros, n&atilde;o ser&aacute; tido como uma transfer&ecirc;ncia pela LeasePlan de quaisquer produtos ou servi&ccedil;os constantes no seu web site ou que atrav&eacute;s dele possam ser obtidos. O uso das referidas liga&ccedil;&otilde;es &eacute; por sua conta e risco, n&atilde;o aceitando a LeasePlan qualquer responsabilidade pelo conte&uacute;do, uso ou disponibiliza&ccedil;&atilde;o dos web sites em causa. A LeasePlan n&atilde;o procedeu &agrave; verifica&ccedil;&atilde;o da veracidade, exactid&atilde;o, razoabilidade, credibilidade ou completude do conte&uacute;do dos referidos web sites.<br><br>
+<strong>Propriedade Intelectual</strong><br>
+A LeasePlan, ou o propriet&aacute;rio em causa, ret&eacute;m pa ra si todos os direitos (incluindo direitos de autor, marcas registadas, patentes e outros direitos de propriedade intelectual) relacionados com a informa&ccedil;&atilde;o constante no web site ou que atrav&eacute;s dele possa ser obtida
+(incluindo textos, gr&aacute;ficos e logotipos). N&atilde;o &eacute; permitida a c&oacute;pia, recolha, publica&ccedil;&atilde;o, distribui&ccedil;&atilde;o ou reprodu&ccedil;&atilde;o de qualquer informa&ccedil;&atilde;o contida neste website, seja porque forma for, sem que previamente seja obtido o consentimento por escrito da LeasePlan ou
+do propriet&aacute;rio em causa. &Eacute;, no entanto, permitida a impress&atilde;o e a recolha de informa&ccedil;&atilde;o
+contida neste web site para seu uso pessoal.<br><br>
+<strong>Comunica&ccedil;&atilde;o On Line</strong><br>
+As mensagens que envie &agrave; LeasePlan por correio electr&oacute;nico poder&atilde;o n&atilde;o ser seguras. A LeasePlan recomenda que n&atilde;o envie informa&ccedil;&otilde;es confidenciais &agrave; LeasePlan por correio electr&oacute;nico. Caso opte por enviar mensagens &agrave; LeasePlan por correio electr&oacute;nico, considere que est&aacute; a aceitar o risco de a informa&ccedil;&atilde;o nelas contida poder ser interceptada, usada de forma incorrecta e alterada por terceiros.<br><br>
+<strong>Exclus&atilde;o de Responsabilidade</strong><br>
+A LeasePlan e os seus agentes ou subcontratados rejeitam qualquer responsabilidade por quaisquer danos directos, indirectos, especiais, acess&oacute;rios, emergentes, punitivos ou exemplares, incluindo lucros cessantes (mesmo que a LeasePlan seja avisada da possibilidade de os mesmos se virem a verificar) que, por qualquer forma, resultem, nomeadamente, (i) de qualquer defeito ou v&iacute;rus ou do mau funcionamento do equipamento ou de qualquer outro software, em consequ&ecirc;ncia do acesso a este web site ou do uso do mesmo, (ii) da informa&ccedil;&atilde;o constante neste web site ou que atrav&eacute;s dele possa ser obtida, (iii) da intercep&ccedil;&atilde;o, modifica&ccedil;&atilde;o ou uso incorrecto da informa&ccedil;&atilde;o transmitida para a LeasePlan ou para si, (iv) do funcionamento ou indisponibilidade deste web site, (v) do uso incorrecto deste website, (vi) da perda de dados, (vii) da recolha ou uso de qualquer software disponibilizado por este web site, ou (viii) de reclama&ccedil;&otilde;es de terceiros relacionadas com o uso deste web site.
+A exclus&atilde;o de responsabilidade abrange tamb&eacute;m os directores e funcion&aacute;rios da LeasePlan.<br><br>
+<strong>Lei Aplic&aacute;vel</strong><br>
+Este web site e a presente Exonera&ccedil;&atilde;o de Responsabilidade ser&atilde;o regidos pela lei portuguesa e ser&atilde;o interpretados de acordo com a mesma. Os lit&iacute;gios emergentes da presente Exonera&ccedil;&atilde;o de Responsabilidade ou com ela relacionados ser&atilde;o dirimidos pelos tribunais portugueses com expressa ren&uacute;ncia a quaisquer outros. Em caso de discrep&acirc;ncia ou diferen&ccedil;a na interpreta&ccedil;&atilde;o das vers&otilde;es em v&aacute;rias l&iacute;nguas da presente Exonera&ccedil;&atilde;o de Responsabilidade, a vers&atilde;o escrita na l&iacute;ngua portuguesaprevalecer&aacute;.<br><br>
+<strong>Altera&ccedil;&otilde;es</strong><br>
+A LeasePlan reserva-se o direito de alterar a informa&ccedil;&atilde;o contida neste web site ou que atrav&eacute;s dele possa ser obtida, nomeadame nte a Exonera&ccedil;&atilde;o de Responsabilidade, em qualquer altura e sem aviso pr&eacute;vio. Por esse motivo, recomenda-se que a informa&ccedil;&atilde;o contida neste web site ou que atrav&eacute;s dele possa ser obtida seja revista periodicamente, a fim de poderem ser detectadas eventuais altera&ccedil;&otilde;es.
+		</p>
+	</div>
+    
+    
+    
+    
+                        <div id="inline2" style="width:600px;display: none;">
+		<h3>DECLARAÇÃO E PRIVACIDADE</h3><br>
+		<p>
+Este web site é gerido pela LeasePlan Portugal-Comércio e Aluguer de Automóveis e Equipamentos, Lda. A LeasePlan poderá proceder à recolha dos seus dados pessoais quer directamente (quando estes lhe são solicitados) quer indirectamente, sempre que acede ao web site. No entanto, a LeasePlan só fará uso desses dados pessoais para os efeitos constantes da presente Declaração de Privacidade, encontrando-se empenhada em proteger os dados pessoais por ela recolhidos. A presente Declaração de Privacidade delineia o objectivo do processamento de dados da LeasePlan com respeito a este website, o uso de “cookies” e a forma em como pode fazer prevalecer os seus direitos com respeito aos seusdados pessoais.<br><br>
+
+<strong>Objectivos do Processamento</strong><br>
+A LeasePlan recolhe e processa informação sobre os clientes e visitantes deste web site para fins comerciais e informativos, para lhe disponibilizar novos produtos e serviços que possam ser do seu interesse e para desenvolver as estatísticas web. A informação por si facultada será usada para o contactar sempre que necessário, ou seja, para o informar de alterações na funcionalidade do web site e para lhe oferecer serviços que lhe possam ser de utilidade (desde que não tenha optado por não querer estes serviços).<br><br>
+
+<strong>Dados Sensíveis</strong><br>
+A LeasePlan não procura obter dados pessoais sensíveis (tais como os que possam revelar opiniões políticas, crenças religiosas, informações sobre a saúde ou outros assuntos) através deste site. A LeasePlan solicitará a sua autorização, caso pretenda recolher os referidos dados. Ao fornecer à LeasePlan dados pessoais sensíveis que não tenham sido por aquela solicitados está a consentir que os mesmos sejam usados pela LeasePlan da forma anteriormente descrita.<br><br>
+
+<strong>“Cookies”</strong><br>
+À semelhança da grande maioria das páginas web disponíveis, a LeasePlan também utiliza a tecnologia de “cookies” nas suas páginas web. Os “cookies” recolhem dados estatísticos dos utilizadores e a LeasePlan utiliza essa informação única e exclusivamente para incrementar a velocidade e usabilidade das suas páginas web. Um “cookie” é um pequeno conjunto de dados enviados a partir de um web site e armazenados no browser do utilizador aquando da sua primeira visita. A informação guardada pode ser recuperada durante essa mesma visita ou em visitas futuras, permitindo que o web site possa adaptar os conteúdos ao perfil do utilizador ou, em casos mais comuns, apresentar credenciais (username | password) anteriormente definidas pelo utilizador.
+Os “cookies” utilizados pela LeasePlan não recolhem informação pessoal dos seus utilizadores. Não foram desenvolvidos para o seguirem como pessoa ou acompanhar o seu comportamento na internet. Caso pretenda, pode alterar a forma como o seu browser utiliza os “cookies”, nomeadamente bloquear ou eliminar “cookies” de páginas web, não permitindo, desta forma, o armazenamento de qualquer informação no seu browser. A gestão de “cookies” pode ser efectuada nas definições do seu browser.<br><br>
+
+<strong>Sites de Terceiros</strong><br>
+A presente Declaração de Privacidade não é extensível aos sites de terceiros que estiverem ligados a este web site. Como Fazer Prevalecer os Seus Direitos; Como Contactar a LeasePlan Caso não queira receber mensagens publicitárias da LeasePlan, poderá contactar-nos através LeasePlan Portugal- Lagoas Park, Edifício 6 2740-244 PORTO SALVO, 707 20 20 20 ou contacto@leaseplan.pt. Caso tenha questões a colocar relativamente à presente Declaração de Privacidade, às nossas actividades de processamento de dados ou aos negócios por nós efectuados com este web site, poderá contactar-nos através LeasePlan Portugal- Lagoas Park, Edifício 6 2740-244 PORTO SALVO, 707 20 20 20 ou contacto@leaseplan.pt.<br><br>
+
+<strong>Alterações</strong><br>
+A LeasePlan reserva-se o direito de, em qualquer altura, alterar (partes) da presente Declaração de Privacidade. Assim, recomendamos que reveja periodicamente a presente Declaração de Privacidade, a fim de poder detectar eventuais alterações.<br><br>
+
+<h3>DECLARAÇÃO DE PRIVACIDADE WEBSITE LEASEPLAN GO</h3><br>
+Este website é gerido pela LeasePlan Portugal-Comércio e Aluguer de Automóveis e Equipamentos, Lda. A LeasePlan poderá proceder à recolha dos seus dados pessoais quer directamente (quando estes lhe são solicitados) quer indirectamente, sempre que acede ao web site. No entanto, a LeasePlan só fará uso desses dados pessoais para os efeitos constantes da presente Declaração de Privacidade, encontrando-se empenhada em proteger os dados pessoais por ela recolhidos. A presente Declaração de Privacidade delineia o objectivo do processamento de dados da LeasePlan com respeito a este web site, o uso de "cookies" e a forma em como pode fazer prevalecer os seus direitos com respeito aos seus dados pessoais.<br><br>
+
+<strong>Objectivos do Processamento</strong><br>
+A LeasePlan recolhe e processa informação sobre os clientes e visitantes deste web site para fins comerciais e informativos, para lhe disponibilizar novos produtos e serviços que possam ser do seu interesse e para desenvolver as estatísticas web. A informação por si facultada será usada para o contactar sempre que necessário, ou seja, para o informar de alterações na funcionalidade do web site e para lhe oferecer serviços que lhe possam ser de utilidade (desde que não tenha optado por não querer estes serviços).
+A informação fornecida pelo utilizador passará a pertencer à base de dados da Lease Plan Portugal e está protegida nos termos e para os efeitos da Lei 67/98 de 26 de Outubro - Lei da Protecção de Dados Pessoais.
+Os dados introduzidos são confidenciais, destinam-se a tratamento electrónico e jamais serão facultados a terceiros, por via gratuita ou comercial, sem o prévio consentimento do seu titular.
+Caso não pretenda que a informação por si facultada seja utilizada para os referidos fins comerciais, solicitamos que informe a LeasePlan Portugal através do envio de um e-mail para contacto@leaseplan.pt ou através do número 707 20 20 20.<br><br>
+
+<strong>Dados Sensíveis</strong><br>
+A LeasePlan não procura obter dados pessoais sensíveis (tais como os que possam revelar opiniões políticas, crenças religiosas, informações sobre a saúde ou outros assuntos) através deste site. A LeasePlan solicitará a sua autorização, caso pretenda recolher os referidos dados. Ao fornecer à LeasePlan dados pessoais sensíveis que não tenham sido por aquela solicitados está a consentir que os mesmos sejam usados pela LeasePlan da forma anteriormente descrita.<br><br>
+
+<strong>"Cookies"</strong><br>
+A LeasePlan poderá recolher informações sobre o uso deste web site, nomeadamente, nome de domínio, número de cliques, páginas visitadas, sites visitados anteriormente e posteriormente e duração da visita. Esta informação poderá ser recolhida através de um "cookie". Um "cookie" é um pequeno ficheiro de texto que é colocado no seu disco rígido pelo nosso servidor de página web. Poderá optar por usar, ou não, um "cookie", alterando as definições do seu "browser ". O "cookie" aumentará a velocidade e a facilidade de acesso ao website.<br><br>
+
+<strong>Sites de Terceiros</strong><br>
+A presente Declaração de Privacidade não é extensível aos sites de terceiros que estiverem ligados a este website.<br><br>
+
+<strong>Como Fazer Prevalecer os Seus Direitos:Como Contactar a LeasePlan?</strong><br>
+Caso não queira receber mensagens publicitárias da LeasePlan, poderá contactar-nos através LeasePlan Portugal- Lagoas Park, Edifício 6 2740-244 PORTO SALVO, 707 20 20 20 ou contacto@leaseplan.pt. Caso tenha questões a colocar relativamente à presente Declaração de Privacidade, às nossas actividades de processamento de dados ou aos negócios por nós efectuados com este web site, poderá contactar-nos através LeasePlan Portugal- Lagoas Park, Edifício 6 2740-244 PORTO SALVO, 707 20 20 20 ou contacto@leaseplan.pt.<br><br>
+
+<strong>Alterações</strong><br>
+A LeasePlan reserva-se o direito de, em qualquer altura, alterar (partes) da presente Declaração de Privacidade. Assim, recomendamos que reveja periodicamente a presente Declaração de Privacidade, a fim de poder detectar eventuais alterações.<br><br>
+
+<h3>DECLARAÇÃO DE PRIVACIDADE WEBSITE CARNEXT</h3><br>
+Este website é gerido pela LeasePlan Portugal-Comércio e Aluguer de Automóveis e Equipamentos, Lda. A LeasePlan poderá proceder à recolha dos seus dados pessoais quer directamente (quando estes lhe são solicitados) quer indirectamente, sempre que acede ao web site. No entanto, a LeasePlan só fará uso desses dados pessoais para os efeitos constantes da presente Declaração de Privacidade, encontrando-se empenhada em proteger os dados pessoais por ela recolhidos. A presente Declaração de Privacidade delineia o objectivo do processamento de dados da LeasePlan com respeito a este web site, o uso de "cookies" e a forma em como pode fazer prevalecer os seus direitos com respeito aos seus dados pessoais.<br><br>
+
+<strong>Objectivos do Processamento</strong><br>
+A LeasePlan recolhe e processa informação sobre os clientes e visitantes deste web site para fins comerciais e informativos, para lhe disponibilizar novos produtos e serviços que possam ser do seu interesse e para desenvolver as estatísticas web. A informação por si facultada será usada para o contactar sempre que necessário, ou seja, para o informar de alterações na funcionalidade do web site e para lhe oferecer serviços que lhe possam ser de utilidade (desde que não tenha optado por não querer estes serviços). A informação fornecida pelo utilizador passará a pertencer à base de dados da Lease Plan Portugal e está protegida nos termos e para os efeitos da Lei 67/98 de 26 de Outubro - Lei da Protecção de Dados Pessoais.
+Os dados introduzidos são confidenciais, destinam-se a tratamento electrónico e jamais serão facultados a terceiros, por via gratuita ou comercial, sem o prévio consentimento do seu titular.
+Caso não pretenda que a informação por si facultada seja utilizada para os referidos fins comerciais, solicitamos que informe a LeasePlan Portugal através do envio de um e-mail para carnext@leaseplan.pt ou através do número 707 227 227.<br><br>
+
+<strong>Dados Sensíveis </strong><br>
+A LeasePlan não procura obter dados pessoais sensíveis (tais como os que possam revelar opiniões políticas, crenças religiosas, informações sobre a saúde ou outros assuntos) através deste site. A LeasePlan solicitará a sua autorização, caso pretenda recolher os referidos dados. Ao fornecer à LeasePlan dados pessoais sensíveis que não tenham sido por aquela solicitados está a consentir que os mesmos sejam usados pela LeasePlan da forma anteriormente descrita.<br><br>
+
+<strong>"Cookies"</strong><br>
+A LeasePlan poderá recolher informações sobre o uso deste web site, nomeadamente, nome de domínio, número de cliques, páginas visitadas, sites visitados anteriormente e posteriormente e duração da visita. Esta informação poderá ser recolhida através de um "cookie". Um "cookie" é um pequeno ficheiro de texto que é colocado no seu disco rígido pelo nosso servidor de página web. Poderá optar por usar, ou não, um "cookie", alterando as definições do seu "browser ". O "cookie" aumentará a velocid ade e a facilidade de acesso ao web site.<br><br>
+
+<strong>Sites de Terceiros</strong><br>
+A presente Declaração de Privacidade não é extensível aos sites de terceiros que estiverem ligados a este web site.<br><br>
+
+<strong>Como Fazer Prevalecer os Seus Direitos: Como Contactar a LeasePlan?</strong><br>
+Caso não queira receber mensagens publicitárias da LeasePlan, poderá contactar-nos através LeasePlan Portugal- Lagoas Park, Edifício 6 2740-244 PORTO SALVO, 707 227 227 ou carnext@leaseplan.pt. Caso tenha questões a colocar relativamente à presente Declaração de Privacidade, às nossas actividades de processamento de dados ou aos negócios por nós efectuados com este web site, poderá contactar-nos através LeasePlan Portugal- Lagoas Park, Edifício 6 2740-244 PORTO SALVO, 707 227 227 ou carnext@leaseplan.pt.<br><br>
+
+<strong>Alterações</strong><br>
+A LeasePlan reserva-se o direito de, em qualquer altura, alterar (partes) da presente Declaração de Privacidade. Assim, recomendamos que reveja periodicamente a presente Declaração de Privacidade, a fim de poder detectar eventuais alterações.
+		</p>
+	</div>
+
+                        <div id="inline3" style="width:400px;display: none;">
+
+     <!--id="contactform"-->
+     
+     
+<form id="signupForm" method="POST" action="processform.php"> 
+
+<ul  style="margin:0; padding:0;" class="forms">
+<li span style="font-size:18px; color: #F5821E; text-transform:"><strong>Contacte-nos!</strong></li>
+
+<li style="margin:0; padding:0;" class="forms">
+<li span style="font-size:14px; color: #000; width:360px; margin-bottom:10px;">
+Pretende um relatório feito a medida das suas necessidades?<br>
+Contacte-nos: <strong>707 02 03 04</strong>
+</li>
+
+<li>
+<label id="nome_label" >Nome*</label><br>
+<input id="nome" name="nome" type="text" style="width:350px; float:left; text-align:left;" />
+</li>
+<li>
+<label id="empresa_label">Empresa*</label><br>
+<input id="empresa" name="empresa" type="text" style="width:350px; float:left; text-align:left;" />
+</li>
+<li>
+<label id="telefone_label">Telefone*</label><br>
+<input id="telefone" name="telefone" type="text" style="width:350px; float:left;" />
+</li>
+<li>
+<label id="email_label">E-mail*</label><br>
+<input id="email" name="email" type="text" style="width:350px; float:left; text-align:left;" />
+</li>
+<div style=" clear:both"></div>
+<li style="margin:0;"> <span style="font-size:10px; color: #000; float:right; margin-right:-70px; margin-top:10px;
+"> *os campos assinalados são obrigatórios. </span>
+</li>
+<li id="button" style="float:right; width:120px; margin-top:15px;">
+                                <span class="button-orange-left2"></span>
+<input class="button-orange2" type="submit" name="submitted" id="submitted" value="Enviar" />
+                                <span class="button-orange-right2"></span></li>
+</ul>
+</form>
+ </div>
+	</body>
+</html>
