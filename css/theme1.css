@@ -73,6 +73,12 @@ div, span
     font-size: 25px;
     color: #FFFFFF;
 }
+
+.big-header2
+{
+    font-size: 18px;
+    color: #FFFFFF;
+}
 .small-header 
 {
     font-size: 13px;
@@ -564,3 +570,7 @@ div, span
 {
 	padding:10px;
 }
+
+/*Estilos acrescentados*/
+
+#ComparisonPageTailoredReport { font-size:16px;}

@@ -2,7 +2,10 @@
 
     if (labelPage === 0) {
         $('#HomePageTitle').html(HomePage.Title);
-        $('#HomePageTitle1').html(HomePage.Title1);
+         $('#HomePageTitle1').html(HomePage.Title1);
+		$('#HomePageTitle3').html(HomePage.Title3);
+				$('#HomePageTitle4').html(HomePage.Title4);
+
         $('#HomePageSubtitle').html(HomePage.Subtitle);
         $('#HomePageContent').html(HomePage.Content);
         $('#HomePageStartButton').html(HomePage.StartButton);
@@ -30,6 +33,9 @@
 //VEICULO - Tipo\\Prazo\\KMs\\Financiamento
         $('#HomePageTitle').html(HomePage.Title);
         $('#HomePageTitle1').html(HomePage.Title1);
+		 $('#HomePageTitle3').html(HomePage.Title3);
+		 				$('#HomePageTitle4').html(HomePage.Title4);
+
         $('#ComparisonPageSelectVehicle').html(ComparisonPage.SelectVehicle);
         $('#ComparisonPageTypeofCar').html(ComparisonPage.TypeofCar);
         $('#ComparisonPageFinanceMethod').html(ComparisonPage.FinanceMethod);
