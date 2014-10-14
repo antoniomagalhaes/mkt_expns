@@ -400,8 +400,9 @@ div, span
 }
 .landingsPageBackground
 {
-	background-image: url(../uploads/images/img-gdr.jpg);
-	background-repeat: repeat-x;
+	background-image: url(../uploads/images/img-gdr.jpg) ;
+	background-repeat:no-repeat;
+	
 }
 
 .footer 

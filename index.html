@@ -31,14 +31,6 @@
 	<link rel="stylesheet" type="text/css" href="../source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
 	<script type="text/javascript" src="source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
 
-	<!-- Add Thumbnail helper (this is optional) -->
-	<link rel="stylesheet" type="text/css" href="../source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
-	<script type="text/javascript" src="source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
-
-	<!-- Add Media helper (this is optional) -->
-	<script type="text/javascript" src="source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
-
-
 	<script type="text/javascript">
         $(document).ready(function() {
             $(".fancybox").fancybox();
@@ -48,13 +40,6 @@
 
 	<link rel="stylesheet" type="text/css" href="css/theme1.css" />
 
-<!-- Abre uma janela com iframe onLoad-->   
-	<script type="text/javascript">
-    //$//(document).ready(function() {
-       // $.fancybox({'href' : 'http://www.cnn.com','frameWidth':500,'frameHeight':500,'hideOnContentClick': false,'type':'iframe'});
-    //});
-    </script>
-<!-- Abre uma janela com iframe onLoad-->   
 
 <!-- Google - UA-51481384-1 - Tracking Code-->
 	<script type="text/javascript">
@@ -72,227 +57,7 @@
     </script>
 
 <!-- Google Tracking Code-->
-<style>
-/*Botão rolover submit*/
-#signupForm{margin:30px auto 5px 23px;
-	float:left;
-}
-#contactform{
 	
-	}
-
-ul.forms {
-	text-align:left;
-		list-style-type:none;
-	padding:0;
-	float: left;
-	list-style: none;
-	/*position:relative;*/
-	font-family:Arial, Helvetica, sans-serif; color:#FFF; font-size:14px;
-}
-
-.field {
-	font-family:Arial, Helvetica, sans-serif; color:#000; font-size:14px; background:#fff; border:#161616; padding:2px; 
-	 width:200px; 
-/*	 float:right;
-*/	
-}
-
-
-UL.forms li {
-	float: left;
-	margin-bottom: 3px;
-	width: 280px;
-	position:relative;
-	list-style-type:  none;
-}
-
-UL.forms label {
-	color: #006; font-size:14px; float:left; padding-top:6px; font-weight:bold;
-	font-family:Arial, Helvetica, sans-serif; color:#FFF;;
-}
-
-UL.forms .error { 
-	display: block;
-}
-
-UL.forms li.buttons {
-	text-align:right;
-}
-
-
-
-#submitted{ background-color:#F90;
-font-weight:bold;
-/*background: url(images/bot_submit.png) 0px 0px no-repeat;
-*/
-/*width:128px;
-height:47px;*/
-height: 26px;
-border:none;
-cursor:pointer;
-display:block;
-/*float:right;
-margin-right:-70px;
-margin-top:10px;
-margin-bottom:5px;*/
-font-size:14px;
-color:#000;
-
-
-/*text-indent:-9999px;
-*/
-
-}
-
-#submitted:hover{ background-color: #FC0;
-font-weight:bold;
-/*background: url(images/bot_submit.png) 0px -47px no-repeat;*/
-/*width:128px;
-height:47px;*/
-height: 26px;
-border:none;
-cursor:pointer;
-display:block;
-/*text-indent:-9999px;
-*/
-/*margin-right:-70px;
-margin-bottom:5px;*/
-color:#FFF;
-font-size:14px;
-
-
-}
-
-#nome_label, #telefone_label, #empresa_label, #email_label{ display:block; width:84px; height:17px; padding-top:3px; color:#000; }
-/*#nome_label{ background:url(images/nome-label.png) bottom left no-repeat;}*/
-/*#localidade_label{ background:url(images/localidade-label.png) bottom left no-repeat;}
-*/
-/*#telefone_label{  background:url(images/telefone-label.png) bottom left no-repeat;}
-*/
-/*#email_label{ background:url(images/email-label.png) bottom left no-repeat;}
-*/#button{ float:right;
-margin-right:-70px;
-margin-top:10px;
-margin-bottom:5px;}
-
-.error{font-family:Arial, Helvetica, sans-serif; color: #999; font-size:12px; padding:0px 0px 5px 0px; text-align:left;}
-
-/*.obrigatorio{ width:250px; height:15px; margin:0; padding:0; background:url(images/preenchimento.png) bottom right no-repeat;}
-*/
-#cleardiv{ clear:both;}
-
-/* herdado das validações*/
-label { 
-	float: left; 
-	padding-right:0px;
-}
-label.error { display: block; margin-left:220px; margin-top:15px; width:138px; position:absolute; font:Arial, Helvetica, sans-serif; font-size:10px;
-
-	float: none; 
-	color: #999!important; 
-	padding-right:3px; 
-	vertical-align: top;
-	cursor:text;
-	background:url(images/nono.png) bottom left no-repeat #FFF;
-}
-p { 
-	clear: both; 
-}
-.gray { 
-	/*color: gray;*/
-	display: none;
-}
-
-</style>
-
-	<script type="text/javascript">
-    $(document).ready(function(){
-<!-- Contact Form  -->
-			$("#contact_us").fancybox({
-				type     :"inline",
-				closeBtn :true
-			});
-			
-		});
-	</script>
-	<script type="text/javascript">
-	
-	$("#signupForm").click(function(){	
-			
-			var nome 	= $("#nome").val();
-			var empresa = $("#empresa").val();
-			var telefone = $("#telefone").val()
-			var email 	= $("#email").val();
-			
-			
-				if( (nome == "") || (empresa == "") || (telefone == "")|| (email == "")){
-					$(".errormsg").html(" * Todos os campos são obrigatórios").fadeIn("Slow").fadeOut(3000);
-				}else if(!isValidEmailAddress(email)){
-					$(".errormsg").html(" * Insira um e-mail válido").fadeIn("Slow").fadeOut(3000);
-					}else if(!isValidEmailAddress(telefone)){
-					$(".errormsg").html(" * Insira um telefone válido").fadeIn("Slow").fadeOut(3000);
-					
-				} else{
-					$(".errormsg").fadeOut();
-					$.ajax({
-						type	:'POST',
-						url		:'processform.php',
-						data	:{	'nome' 	 : name,
-									'empresa' 	 : empresa,
-									'telefone'	 : telefone,
-									'email'	 : email
-								 },
-						beforeSend: function(){
-							$("#signupForm").empty().html("<h3>Estamos a enviar os seus dados. Aguarde por favor . . . </h3>");
-						},
-						error:function(){
-							alert("Dados não submetidos!");
-						},
-						success:function(returnData){
-							$("#signupForm").empty().html("<h3>Os seus dados foram enviados <br/> Muito Obrigado</h3>");
-							window.location.reload();
-							
-						}
-					});
-				}
-				
-		});
-		
-	</script>
-
-<!--Javascript para validação-->
-	<script type="text/javascript">
-    $(document).ready(function(){
-        // validate signup form on keyup and submit
-        $("#signupForm").validate({
-            rules: {
-                nome: "required",
-                empresa: "required",
-                email: {
-                    required: true,
-                    email: true
-                },
-                telefone: {
-                    required: true,
-                    telefonePT: true
-                }
-                
-            },
-            messages: {
-                nome: "Insira o seu nome",
-				telefone: "Insira telefone",
-                empresa: "Insira a localidade",
-                email: "Insira o seu email"
-                //telefone: "Please specify a valid Telefone.",
-            }
-        });
-        
-        
-    });
-    </script> 
-<!--Javascript para validação-->
-
 	</head>
 
 	<body>
@@ -301,8 +66,7 @@ p {
                 <div class="black container-inner header">
                     <div class="twothird left">
                         <div class="big-header" id="HomePageTitle" style="font-size:30px; margin-top:29px;">HomePageTitle</div>
-<!--                        <div class="big-header1" id="HomePageTitle1">HomePageTitle1</div>
--->                    </div>
+</div>
                     <div class="onethird right">
                         <div class="logo right"></div>
                     </div>
@@ -310,19 +74,14 @@ p {
                 </div>
      
 <!--  Início   -->     
-                <div class="white">
+    <div class="white">
                     <div class="black container-inner-left left" style="min-height:300px; width:50%; margin-bottom:0px;margin-right:0px; padding-left:20px;">
-                        <div class="big-header" id="HomePageTitle1" style="margin:25px 0 0 0; font-size:28px; margin-bottom:20px;">HomePageSubtitle1</div>
-                        <div id="HomePageContent" style="font-size:17px; margin-top:30px;">HomePageContent</div>
+                      <div class="big-header" id="HomePageTitle1" style="margin:25px 0 0 0; font-size:28px; margin-bottom:20px;">HomePageSubtitle1</div>
+                      <div id="HomePageContent" style="font-size:17px; margin-top:30px;">HomePageContent</div>
                         <div>
-                            <!--<div class="button" style="margin-top:30px;" id="btnStartComparison">
-                                <div class="button-orange-left"></div>
-                                <div class="button-orange" id="HomePageStartButton" onClick="_gaq.push(['_trackEvent', 'BotaoToP2', 'Click', 'EntradaNoSimulador'])" >HomePageStartButton</div>
-                                <div class="button-orange-right"></div>
-                            </div>-->
                         </div>
                     </div>
-                    <div class="black container-inner-right right landingsPageBackground" style="min-height:300px; width:50%; margin-bottom:0px;margin-right:0px;" id="LandingBackground">
+      <div class="black container-inner-right right landingsPageBackground" style="min-height:300px; width:50%; margin-bottom:0px;margin-right:0px;" id="LandingBackground">
                         
                     </div>
                     <div style="clear: both;"></div>
@@ -331,7 +90,7 @@ p {
 
      
             
-            <div class="white container-outer">
+<div class="white container-outer">
                  <div class="silver container-inner" style=" background-image: url(uploads/images/img-bck.jpg); background-repeat: no-repeat; background-position:right; height:168px; padding-left:20px;">
                     <div class="two left">
                         <div class="section-info section-title" style="margin-left:0px; font-size: 22px;" id="HomePageHeader1">HomePageHeader1</div>
@@ -339,20 +98,17 @@ p {
                     </div>
  
                  <div class="one left">
-                        <a href="tool.html" style="text-indent: -9999px;"> <div class=" clickable" onClick="_gaq.push(['_trackEvent', 'Botao_Contacto', 'Click', 'PedidoRelatorioPorMedida'])" style=" width:460px; height:167px;"></div></a>
-                      
-                   </div>
-                   <!-- <div class="one left">
-                        <div class="section-info section-title" style="margin-left:0px;" id="HomePageHeader2">HomePageHeader2</div>
-                        <div id="HomePageContent2">HomePageContent2</div>
-                    </div>
-                    <div class="one left">
-                        <div class="section-info section-title" style="margin-left:0px;" id="HomePageHeader3">HomePageHeader3</div>
-                        <div id="HomePageContent3">HomePageContent3</div>
-                    </div>-->
-                 </div>
-                 
-                 <div class="black container-inner header footer" style="margin-bottom:0px;">
+                        <a href="tool.html" style="text-indent:-9999px;"> <div class=" clickable" onClick="_gaq.push(['_trackEvent', 'Botao_Contacto', 'Click', 'EntradanoSimulador'])" style=" width:460px; height:167px;"></div></a>
+                  </div>
+               </div>
+</div>
+ 
+ 
+ <!-- footer -->
+                
+<div class="black container-inner header footer">
+                    
+                    
                      <div class="three left">
                         <div  style="height:20px; margin: 15px 0 0 20px;">
                             <span id="HomePageCompanyName">HomePageCompanyName</span>
@@ -362,40 +118,28 @@ p {
                             <span id="HomePageAddress2">HomePageAddress2</span>
                             <span class="sep-bullet">&bull;</span>
                             <span id="HomePageAddress3">HomePageAddress3</span>
-                        </div>
+                   </div>
                         <div>
-<!--                            <span style="font-size:20px; margin-right:5px;">&rsaquo;</span> 
---> <!--Bot tracked-->
-                          <!-- <span id="" href="#inline1" onClick="_gaq.push(['_trackEvent', 'Botao_P1', 'Click', 'Responsabilidade'])" class="clickable fancybox" title="Responsabilidade" >Responsabilidade</span>
-                           <span id="HomePageDisclaimer" onClick="_gaq.push(['_trackEvent', 'Botao_P1', 'Click', 'Responsabilidade'])" class="clickable fancybox fancybox.iframe" title="Responsabilidade" >HomePageDisclaimer</span>-->
-                       
-    <!--                        <span style="font-size:20px; margin-right:5px;margin-left:10px;">&rsaquo;</span>-->
-<!--Bot tracked-->
- <!--<span id="" href="#inline2" onClick="_gaq.push(['_trackEvent', 'Botao_P1', 'Click', 'Responsabilidade'])" class="clickable fancybox" title="Privacidade" >Privacidade</span>-->
-                         <!--   <span id="HomePagePrivacyStatement" onClick="_gaq.push(['_trackEvent', 'Botao_P1', 'Click', 'Privacidade'])" class="clickable">HomePagePrivacyStatement</span>-->
-                        </div>
+                          </div>
                     </div>
-                    <div class="one left" style=" float:right; height:20px; margin: 10px -10px 0 0px;>
                     
-                     <span style="font-size:20px; margin-right:5px;">&rsaquo;</span> 
+                          <div class="one left" style=" float:right; height:20px; margin:10px -10px 0 0px;>
+                          
+                          <span style="font-size:20px; margin-right:5px;margin-left:10px;">&rsaquo;</span>
  <!--Bot tracked-->
-                          <span id="" href="#inline1" onClick="_gaq.push(['_trackEvent', 'Botao_P1', 'Click', 'Responsabilidade'])" class="clickable fancybox" title="Responsabilidade" >Responsabilidade</span>
-                           <!-- <span id="HomePageDisclaimer" onClick="_gaq.push(['_trackEvent', 'Botao_P1', 'Click', 'Responsabilidade'])" class="clickable fancybox fancybox.iframe" title="Responsabilidade" >HomePageDisclaimer</span>-->
-                       
-                            <span style="font-size:20px; margin-right:5px;margin-left:10px;">&rsaquo;</span>
+ <span id="" href="#inline1" onClick="_gaq.push(['_trackEvent', 'Botao_P1', 'Click', 'Responsabilidade'])" class="clickable fancybox" title="Responsabilidade" >Responsabilidade</span>
+<span style="font-size:20px; margin-right:5px;margin-left:10px;">&rsaquo;</span>
 <!--Bot tracked-->
  <span id="" href="#inline2" onClick="_gaq.push(['_trackEvent', 'Botao_P1', 'Click', 'Responsabilidade'])" class="clickable fancybox" title="Privacidade" >Privacidade</span>
-                    
-                    
-                   <!-- <span id="" href="#inline3" onClick="_gaq.push(['_trackEvent', 'Botao_P1', 'Click', 'Contacto'])" class="clickable fancybox" title="Contacte-nos" >CONTACTE-NOS</span>
-                        <div style="height: 20px;"><span style="font-size:20px; margin-right:5px;">&rsaquo;</span>
-                        <span id="HomePageContactUs" onClick="_gaq.push(['_trackEvent', 'Botao_P1', 'Click', 'Contacto'])" class="clickable">HomePageContactUs</span></div>-->
-<!--                        <div style="height: 20px;"><span style="font-size:20px; margin-right:5px;">&rsaquo;</span>
---><!--Bot tracked-->
-                           <!--   <span id="HomePageAbout" onClick="_gaq.push(['_trackEvent', 'Botao_P1', 'Click', 'Sobre'])" class="clickable">HomePageAbout</span></div>-->
-                    </div>
-                    <div style="clear: both;"></div>
+                          
+                          </div>
 
+                    
+ <!-- footer fim -->
+                    
+
+                    <div style="clear: both;"></div>
+                    
 <!--Conteúdo da responsabilidade -->
 
                     <div id="inline1" style="width:600px;display: none;">
@@ -503,49 +247,6 @@ Caso não queira receber mensagens publicitárias da LeasePlan, poderá contactar-n
 A LeasePlan reserva-se o direito de, em qualquer altura, alterar (partes) da presente Declaração de Privacidade. Assim, recomendamos que reveja periodicamente a presente Declaração de Privacidade, a fim de poder detectar eventuais alterações.
 		</p>
 	</div>
-
-                        <div id="inline3" style="width:400px;display: none;">
-
-     <!--id="contactform"-->
-     
-     
-<form id="signupForm" method="POST" action="processform.php"> 
-
-<ul  style="margin:0; padding:0;" class="forms">
-<li span style="font-size:18px; color: #F5821E; text-transform:"><strong>Contacte-nos!</strong></li>
-
-<li style="margin:0; padding:0;" class="forms">
-<li span style="font-size:14px; color: #000; width:360px; margin-bottom:10px;">
-Pretende um relatório feito a medida das suas necessidades?<br>
-Contacte-nos: <strong>707 02 03 04</strong>
-</li>
-
-<li>
-<label id="nome_label" >Nome*</label><br>
-<input id="nome" name="nome" type="text" style="width:350px; float:left; text-align:left;" />
-</li>
-<li>
-<label id="empresa_label">Empresa*</label><br>
-<input id="empresa" name="empresa" type="text" style="width:350px; float:left; text-align:left;" />
-</li>
-<li>
-<label id="telefone_label">Telefone*</label><br>
-<input id="telefone" name="telefone" type="text" style="width:350px; float:left;" />
-</li>
-<li>
-<label id="email_label">E-mail*</label><br>
-<input id="email" name="email" type="text" style="width:350px; float:left; text-align:left;" />
-</li>
-<div style=" clear:both"></div>
-<li style="margin:0;"> <span style="font-size:10px; color: #000; float:right; margin-right:-70px; margin-top:10px;
-"> *os campos assinalados são obrigatórios. </span>
-</li>
-<li id="button" style="float:right; width:120px; margin-top:15px;">
-                                <span class="button-orange-left2"></span>
-<input class="button-orange2" type="submit" name="submitted" id="submitted" value="Enviar" />
-                                <span class="button-orange-right2"></span></li>
-</ul>
-</form>
- </div>
+                       
 	</body>
 </html>
