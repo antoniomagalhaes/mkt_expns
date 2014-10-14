@@ -574,3 +574,164 @@ div, span
 /*Estilos acrescentados*/
 
 #ComparisonPageTailoredReport { font-size:16px;}
+
+#HomePageTitle4 { font-size:14px;}
+
+.button-dark-sim
+{
+    background-image: url('../images/theme1/icons/btn_dark_simul.png');
+    width: 179px;
+    height:41px;
+    float:left;
+    display:inline-block;
+    text-align:center;
+}
+.button-dark-left-sim
+{
+    background-image: url('../images/theme1/icons/btn_dark_simul_esq.png');
+    width:11px;
+    height:41px;
+    float:left;
+    display:inline-block;
+}
+.button-dark-right-sim
+{
+    background-image: url('../images/theme1/icons/btn_dark_simul_dir.png');
+    width:12px;
+    height:41px;
+    float:left;
+    display:inline-block;
+}
+
+.button-sim
+{
+    height:41px;
+    line-height:41px;
+    font-size:18px;
+    color:#fff;
+    font-weight:bold;
+    cursor: pointer;
+    min-width:100px;
+}
+
+
+/*FancyBox CSS*/
+
+/*Botão rolover submit*/
+
+#signupForm{margin:30px auto 5px 23px;
+	float:left;
+}
+#contactform{
+	
+	}
+
+ul.forms {
+	text-align:left;
+		list-style-type:none;
+	padding:0;
+	float: left;
+	list-style: none;
+	/*position:relative;*/
+	font-family:Arial, Helvetica, sans-serif; color:#FFF; font-size:14px;
+}
+
+.field {
+	font-family:Arial, Helvetica, sans-serif; color:#000; font-size:14px; background:#fff; border:#161616; padding:2px; 
+	 width:200px; 
+/*	 float:right;
+*/	
+}
+
+
+UL.forms li {
+	float: left;
+	margin-bottom: 3px;
+	width: 280px;
+	position:relative;
+	list-style-type:  none;
+}
+
+UL.forms label {
+	color: #006; font-size:14px; float:left; padding-top:6px; font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif; color:#FFF;;
+}
+
+UL.forms .error { 
+	display: block;
+}
+
+UL.forms li.buttons {
+	text-align:right;
+}
+
+
+
+#submitted{
+	float:right;
+	margin-right: 25px;
+	background-image:url(../images/theme1/icons/form-bot.jpg);
+	background-repeat:no-repeat;
+	font-weight:bold;
+	width:90px;
+	height: 24px;
+	border:none;
+	cursor:pointer;
+	display:block;
+	font-size:14px;
+	color:#FFF;
+}
+
+#submitted:hover{
+	float:right;
+	margin-right: 25px;
+	background-image:url(../images/theme1/icons/form-bot.jpg);
+	background-repeat:no-repeat;
+	font-weight:bold;
+	width:90px;
+	height: 24px;
+	border:none;
+	cursor:pointer;
+	display:block;
+	color:#ebebeb;
+	font-size:14px;
+}
+
+#nome_label, #telefone_label, #empresa_label, #email_label{ display:block; width:350px; height:17px; padding-top:3px; color:#000; }
+/*#email_label{ background:url(images/email-label.png) bottom left no-repeat;}*/
+#nome, #empresa, #telefone, # email{float:left; text-align:left;}
+
+#button{
+	float:right;
+	margin-top:15px;
+	margin-bottom:5px;}
+
+.error{font-family:Arial, Helvetica, sans-serif; color: #999; font-size:12px; padding:0px 0px 5px 0px; text-align:left;}
+
+#cleardiv{ clear:both;}
+
+/* herdado das validações*/
+label { 
+	float: left; 
+	padding-right:0px;
+}
+label.error { display: block; margin-left:220px; margin-top:15px; width:138px; position:absolute; font:Arial, Helvetica, sans-serif; font-size:10px;
+
+	float: none; 
+	color: #999!important; 
+	padding-right:3px; 
+	vertical-align: top;
+	cursor:text;
+	background:url(images/nono.png) bottom left no-repeat #FFF;
+}
+p { 
+	clear: both; 
+}
+.gray { 
+	/*color: gray;*/
+	display: none;
+}
+
+#obriga { font-size:10px; color:#000; float:right; margin-right:-70px; margin-top:10px}
+
+#titulo {font-size:18px; color: #F5821E;}

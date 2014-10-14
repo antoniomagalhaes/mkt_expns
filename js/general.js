@@ -33,9 +33,9 @@ $(document).ready(function($) {
 		}
 		$('.currency-symbol').html(usedCurrencySymbol);
 		
-		$('#ComparisonPageContactUs').click(function() {
+		/*$('#ComparisonPageContactUs').click(function() {
 			window.location = ContactPage.ExtraField2;
-		});
+		});*/
 		
 		
 		$('#drpYears').attr('disabled', true);

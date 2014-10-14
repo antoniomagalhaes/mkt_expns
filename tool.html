@@ -16,7 +16,19 @@
 		<script type="text/javascript" src="js/json2.js"></script>
 
 
+<!-- FANCY BOX -->
 
+	<script type="text/javascript" src="source/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+
+
+	<script type="text/javascript">
+        $(document).ready(function() {
+            $(".fancybox").fancybox();
+        });
+    </script>
+<!-- FANCY BOX -->
 
 
 
@@ -45,6 +57,101 @@
 </script>
 
 <!-- Google Tracking Code-->
+
+
+<!--Formulário de lead-->
+
+	<script type="text/javascript">
+    $(document).ready(function(){
+<!-- Contact Form  -->
+			$("#contact_us").fancybox({
+				type     :"inline",
+				closeBtn :true
+			});
+			
+		});
+	</script>
+	<script type="text/javascript">
+	
+	$("#signupForm").click(function(){	
+			
+			var nome 	= $("#nome").val();
+			var empresa = $("#empresa").val();
+			var telefone = $("#telefone").val()
+			var email 	= $("#email").val();
+			
+			
+				if( (nome == "") || (empresa == "") || (telefone == "")|| (email == "")){
+					$(".errormsg").html(" * Todos os campos são obrigatórios").fadeIn("Slow").fadeOut(3000);
+				}else if(!isValidEmailAddress(email)){
+					$(".errormsg").html(" * Insira um e-mail válido").fadeIn("Slow").fadeOut(3000);
+					}else if(!isValidEmailAddress(telefone)){
+					$(".errormsg").html(" * Insira um telefone válido").fadeIn("Slow").fadeOut(3000);
+					
+				} else{
+					$(".errormsg").fadeOut();
+					$.ajax({
+						type	:'POST',
+						url		:'processform.php',
+						data	:{	'nome' 	 : name,
+									'empresa' 	 : empresa,
+									'telefone'	 : telefone,
+									'email'	 : email
+								 },
+						beforeSend: function(){
+							$("#signupForm").empty().html("<h3>Estamos a enviar os seus dados. Aguarde por favor . . . </h3>");
+						},
+						error:function(){
+							alert("Dados não submetidos!");
+						},
+						success:function(returnData){
+							$("#signupForm").empty().html("<h3>Os seus dados foram enviados <br/> Muito Obrigado</h3>");
+							window.location.reload();
+							
+						}
+					});
+				}
+				
+		});
+		
+	</script>
+
+<!--Javascript para validação-->
+	<script type="text/javascript">
+    $(document).ready(function(){
+        // validate signup form on keyup and submit
+        $("#signupForm").validate({
+            rules: {
+                nome: "required",
+                empresa: "required",
+                email: {
+                    required: true,
+                    email: true
+                },
+                telefone: {
+                    required: true,
+                    telefonePT: true
+                }
+                
+            },
+            messages: {
+                nome: "Insira o seu nome",
+				telefone: "Insira telefone",
+                empresa: "Insira a localidade",
+                email: "Insira o seu email"
+                //telefone: "Please specify a valid Telefone.",
+            }
+        });
+        
+        
+    });
+    </script> 
+<!--Javascript para validação-->
+<!--Formulário de lead-->
+
+
+
+
 	</head>
 
 	<body>
@@ -168,14 +275,22 @@
                                 </div>
                             </td>
                             <td width="25%" valign="top" style="padding:3px;">
-                                <div class="orange container-inner" style="height:135px">
+                                
+                                
+                                <div class="orange container-inner" style="height:135px; background-image:url(uploads/images/img-pag.jpg); background-repeat:no-repeat; padding:12px 0 0 13px;">
                                     <div id="ComparisonPageTailoredReport">ComparisonPageTailoredReport</div>
                                     <!--<div id="ComparisonPageCallUs">ComparisonPageCallUs</div>-->
                                     <br />
-                                    <div class="button" id="btnContactUs" style="text-align:center;">
-                                        <div class="button-dark-left"></div>
-                                        <div class="button-dark" onClick="_gaq.push(['_trackEvent', 'Botao_Contacto', 'Click', 'PedidoRelatorioPorMedida'])" id="ComparisonPageContactUs" >ComparisonPageContactUs</div>
-                                        <div class="button-dark-right"></div>
+                                    <div class="button-sim" id="btnContactUs" style="text-align:center;">
+<!--Botão clicável-->
+                                        <span class="clickable fancybox" href="#inline3" onClick="_gaq.push(['_trackEvent', 'Botao_Contacto', 'Click', 'PedidoRelatorioPorMedida'])" title="Contacte-nos"> 
+                                        <div class="button-dark-left-sim"></div>
+                                        <div class="button-dark-sim"  id="ComparisonPageContactUs" >ComparisonPageContactUs</div>
+                                        <div class="button-dark-right-sim"></div>
+                                        </span>
+<!--Botão clicável-->
+
+                                      
                                     </div>
                                 </div>
                        
@@ -671,5 +786,45 @@
 		        </form>
 		    </div>
 		</div>
+<!--Inline contact Form-->
+<div id="inline3" style="width:400px;display: none;">
+     
+<form id="signupForm" method="POST" action="processform.php"> 
+
+<ul  style="margin:0; padding:0;" class="forms">
+<li id="titulo"><strong>Pedido de Contacto</strong></li>
+
+<li style="margin:0; padding:0;" class="forms">
+<li span style="font-size:14px; color: #000; width:360px; margin-bottom:10px;">
+Por favor preencha o formulário para receber um relatório á medida das suas necessidades.</br></br>
+Ou contacte-nos pelo: <strong>707 02 03 04</strong>
+</li>
+
+<li>
+<label id="nome_label" >Nome*</label><br>
+<input id="nome" name="nome" type="text" style="width:350px;" />
+</li>
+<li>
+<label id="empresa_label">Empresa*</label><br>
+<input id="empresa" name="empresa" type="text" style="width:350px;"/>
+</li>
+<li>
+<label id="telefone_label">Telefone*</label><br>
+<input id="telefone" name="telefone" type="text" style="width:350px;"/>
+</li>
+<li>
+<label id="email_label">E-mail*</label><br>
+<input id="email" name="email" type="text" style="width:350px;" />
+</li>
+<div style=" clear:both"></div>
+<li style="margin:0;"> <span id="obriga"> *os campos assinalados são obrigatórios. </span>
+</li>
+<li id="button">
+<input class="button-orange2" type="submit" name="submitted" id="submitted" value="Enviar" />
+</li>
+</ul>
+</form>
+ </div>
+        
 	</body>
 </html>
