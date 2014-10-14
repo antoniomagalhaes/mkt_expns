@@ -14,8 +14,7 @@ body
     font-weight: bold;
 }
 
-
-
+container
 
 
 input, select, form
@@ -63,10 +62,10 @@ div, span
 }
 .big-header 
 {
-    font-size: 25px;
-    font-weight: bold;
-    color: #f5821e;
-    margin-top: 15px;
+	font-size: 25px;
+	font-weight: bold;
+	color: #f5821e;
+	margin-top: 15px;
 }
 .big-header1
 {
@@ -373,7 +372,7 @@ div, span
 
 .container-outer 
 {
-    margin-bottom:20px;
+    margin-bottom:0px;
 }
 .container-top 
 {
@@ -401,8 +400,8 @@ div, span
 }
 .landingsPageBackground
 {
-    background-image:url('../uploads/images/landingsPage.png');
-    background-repeat:repeat-x;
+	background-image: url(../uploads/images/img-gdr.jpg);
+	background-repeat: repeat-x;
 }
 
 .footer 
