@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Comparison Tool</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+		<script type="text/javascript" src="js/effects.js"></script>
+		<script type="text/javascript" src="js/labels.js"></script>
+		<script type="text/javascript" src="js/general.js"></script>
+		<script type="text/javascript" src="js/json2.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="css/theme1.css" />
+
+
+
+<!-- GA-->
+
+
+ <!-- Google - UA-51481384-1 - Tracking Code-->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-51481384-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!-- Google Tracking Code-->
+
+
+
+<script type="text/javascript">
+	
+	$("#signupForm").click(function(){	
+			
+			var nome 	= $("#nome").val();
+			var empresa = $("#empresa").val();
+			var telefone = $("#telefone").val()
+			var email 	= $("#email").val();
+			
+			
+				if( (nome == "") || (empresa == "") || (telefone == "")|| (email == "")){
+					$(".errormsg").html(" * Todos os campos são obrigatórios").fadeIn("Slow").fadeOut(3000);
+				}else if(!isValidEmailAddress(email)){
+					$(".errormsg").html(" * Insira um e-mail válido").fadeIn("Slow").fadeOut(3000);
+					}else if(!isValidEmailAddress(telefone)){
+					$(".errormsg").html(" * Insira um telefone válido").fadeIn("Slow").fadeOut(3000);
+					
+				} else{
+					$(".errormsg").fadeOut();
+					$.ajax({
+						type	:'POST',
+						url		:'processform.php',
+						data	:{	'nome' 	 : name,
+									'empresa' 	 : empresa,
+									'telefone'	 : telefone,
+									'email'	 : email
+								 },
+						beforeSend: function(){
+							$("#signupForm").empty().html("<h3>Estamos a enviar os seus dados. Aguarde por favor . . . </h3>");
+						},
+						error:function(){
+							alert("Dados não submetidos!");
+						},
+						success:function(returnData){
+							$("#signupForm").empty().html("<h3>Os seus dados foram enviados <br/> Muito Obrigado</h3>");
+							window.location.reload();
+							
+						}
+					});
+				}
+				
+		});
+		
+	</script>
+
+<!--Javascript para validação-->
+	<script type="text/javascript">
+    $(document).ready(function(){
+        // validate signup form on keyup and submit
+        $("#signupForm").validate({
+            rules: {
+                nome: "required",
+                empresa: "required",
+                email: {
+                    required: true,
+                    email: true
+                },
+                telefone: {
+                    required: true,
+                    telefonePT: true
+                }
+                
+            },
+            messages: {
+                nome: "Insira o seu nome",
+				telefone: "Insira telefone",
+                empresa: "Insira a localidade",
+                email: "Insira o seu email"
+                //telefone: "Please specify a valid Telefone.",
+            }
+        });
+        
+        
+    });
+    </script> 
+<!--Javascript para validação-->
+
+
+
+
+	</head>
+
+	<body >
+<!--Inline contact Form-->
+<div id="inline3" style="width:400px;">
+     
+<form id="signupForm" method="POST" action="processform.php"> 
+
+<ul  style="margin:0; padding:0;" class="forms">
+<li id="titulo"><strong>Pretendo Ser Contactado</strong></li>
+
+<li style="margin:0; padding:0;" class="forms">
+<li span style="font-size:14px; color: #000; width:360px; margin-bottom:10px;">
+Preencha o formul&aacute;rio para receber uma simula&ccedil;&atilde;o
+&aacute; medida das suas necessidades!</br>
+Ou contacte-nos pelo: <strong>707 02 03 04</strong>
+</li>
+
+<li>
+<label id="nome_label" >Nome*</label><br>
+<input id="nome" name="nome" type="text" style="width:350px;" />
+</li>
+<li>
+<label id="empresa_label">Empresa*</label><br>
+<input id="empresa" name="empresa" type="text" style="width:350px;"/>
+</li>
+<li>
+<label id="telefone_label">Telefone*</label><br>
+<input id="telefone" name="telefone" type="text" style="width:350px;"/>
+</li>
+<li>
+<label id="email_label">E-mail*</label><br>
+<input id="email" name="email" type="text" style="width:350px;" />
+</li>
+<div style=" clear:both"></div>
+<li style="margin:0;"> <span id="obriga"> *os campos assinalados s&atilde;o obrigat&oacute;rios.
+ </span>
+</li>
+<li id="button">
+<input class="button-orange2" type="submit" name="submitted" id="submitted" value="Enviar" />
+</li>
+</ul>
+</form>
+ </div>
+        
+	</body>
+</html>
